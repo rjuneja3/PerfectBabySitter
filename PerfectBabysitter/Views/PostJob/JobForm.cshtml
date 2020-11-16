@@ -1,0 +1,58 @@
+﻿@model PerfectBabysitter.Models.JobPosting
+
+<p>Please follow the below form to upload your job posting.</p>
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-action="JobForm" method="post">
+    <div class="form-group">
+        <label for="PhoneNumber">Phone Number:</label>
+        <input id="PhoneNumber" asp-for="PhoneNumber" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="col-md-2 control-label">Address:</label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="col-md-2 control-label">Email:</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Number of Children:</label>
+        <input asp-for="Children" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Date:</label>
+        <input asp-for="Date" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Starting Time:</label>
+        <input asp-for="StartTime" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Ending Time:</label>
+        <input asp-for="EndTime" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Preferred Language:</label>
+        <input asp-for="Language" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Other Details</label>
+        <div>
+            <input asp-for="Description" class="form-control" />
+        </div>
+    </div>
+    <br />
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Post Job" />
+    </div>
+</form>
