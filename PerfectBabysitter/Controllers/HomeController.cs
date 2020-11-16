@@ -15,7 +15,6 @@ namespace PerfectBabysitter.Controllers
         {
             return View();
         }
-
     }
     
 }
