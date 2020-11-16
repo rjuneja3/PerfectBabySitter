@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            -ms-border-radius: 4px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: slategrey;
+            padding: 12px 20px;
+            border: none;
+            -ms-border-radius: 4px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            -ms-border-radius: 5px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Post Job Details Form</h3>
+
+<div class="container">
+    <form action="/action_page.php" onsubmit="return validateForm()" method="post">
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" name="fullname" placeholder="Your name..">
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Your home address">
+
+        <label for="phone#">Phone Number</label>
+        <input type="number" id="phone#" name="phone#" placeholder="Your phone number">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email address">
+
+        <label for="children">Number of Children</label>
+        <select id="children" name="children">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3+">3+</option>
+        </select>
+
+        <label for="jobinfo">Job Details</label>
+        <textarea id="jobinfo" name="jobDetails" placeholder="Please state the job information such as summary of what is required..." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

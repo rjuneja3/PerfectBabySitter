@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
   },
   "projects": {
@@ -12,13 +13,33 @@
         "projectPath": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
         "packagesPath": "C:\\Users\\Geerththan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
+=======
+    "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "projectName": "PerfectBabysitter",
+        "projectPath": "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
+>>>>>>> dinesh
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Geerththan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+>>>>>>> dinesh
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
