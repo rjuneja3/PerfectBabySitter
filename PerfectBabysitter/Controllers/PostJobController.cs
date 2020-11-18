@@ -24,7 +24,6 @@ namespace PerfectBabysitter.Controllers
                 return RedirectToAction(nameof(CompletedForm));
             }
 
-            //return RedirectToAction(nameof(CompletedForm));
             return View(job);
         }
 
