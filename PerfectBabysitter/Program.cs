@@ -21,6 +21,7 @@ namespace PerfectBabysitter
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .UseDefaultServiceProvider(options => options.ValidateScopes = false)
+
                 ;
     }
 }

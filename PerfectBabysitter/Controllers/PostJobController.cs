@@ -32,5 +32,9 @@ namespace PerfectBabysitter.Controllers
             ViewBag.CompleteMessage = "Your job posting has been uploaded.";
             return View();
         }
+        public ActionResult ViewJobs()
+        {
+            return View();
+        }
     }
 }
