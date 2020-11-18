@@ -51,6 +51,13 @@ namespace PerfectBabysitter.Controllers
                 return View(jPosting);
             }
         }
+
+        public IActionResult JobPosting(int id)
+        {
+            JobPosting deletedRecipe = postRepository.DeleteJobPosting(id);
+
+            return RedirectToAction("Index");
+        }
     }
     
 }

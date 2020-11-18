@@ -10,5 +10,6 @@ namespace PerfectBabysitter.Models
         IQueryable<JobPosting> JobPostings { get; }
 
         void AddPosting(JobPosting jPosting);
+        JobPosting DeleteJobPosting(int id);
     }
 }
