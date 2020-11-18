@@ -29,6 +29,28 @@ namespace PerfectBabysitter.Controllers
             JobPosting j = postRepository.JobPostings.Single(p => p.Id == id);
             return View(j);
         }
+
+  
+        [HttpGet]
+        public ViewResult EditJobPosting(int id)
+        {
+            return View(postRepository.JobPostings.Single(p => p.Id == id));
+        }
+
+        [HttpPost]
+        public IActionResult EditJobPosting(JobPosting jPosting, IEnumerable<int> checkResponse)
+        {
+            if (ModelState.IsValid)
+            {
+                // method needs to be implemented in repository
+                postRepository.AddPosting(jPosting);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(jPosting);
+            }
+        }
     }
     
 }
