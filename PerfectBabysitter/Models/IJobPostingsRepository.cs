@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PerfectBabysitter.Models
 {
-    interface IJobPostingsRepository
+    public interface IJobPostingsRepository
     {
         IQueryable<JobPosting> JobPostings { get; }
     }
