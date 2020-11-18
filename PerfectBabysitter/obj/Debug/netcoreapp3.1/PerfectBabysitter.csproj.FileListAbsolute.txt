@@ -375,8 +375,8 @@ G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\bin\Debug\netcoreapp
 G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\bin\Debug\netcoreapp3.1\Humanizer.dll
 G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.csprojAssemblyReference.cache
 G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\ViewJobs.cshtml.g.cs
 G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Home\signin.cshtml.g.cs

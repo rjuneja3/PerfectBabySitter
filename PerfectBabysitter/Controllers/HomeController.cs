@@ -14,6 +14,10 @@ namespace PerfectBabysitter.Controllers
         {
             return View();
         }
+        public ActionResult SignIn()
+        {
+            return View();
+        }
     }
     
 }
