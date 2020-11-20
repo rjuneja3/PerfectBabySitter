@@ -23,7 +23,7 @@ namespace PerfectBabysitter.Models
         public string Address {get;set;}
 
         [Required(ErrorMessage = "Please specify the number of children to be looked after")]
-        public int Children{get;set;}
+        public string Children{get;set;}
 
         [Required(ErrorMessage = "Please enter when your scheduling for")]
         public string Date{get;set;}
