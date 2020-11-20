@@ -8596,23 +8596,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rohan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Prince\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\PERFECT\\Updated\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj",
+      "projectUniqueName": "C:\\Users\\Prince\\Documents\\COMP231\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj",
       "projectName": "PerfectBabysitter",
-      "projectPath": "G:\\PERFECT\\Updated\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj",
-      "packagesPath": "C:\\Users\\Rohan\\.nuget\\packages\\",
-      "outputPath": "G:\\PERFECT\\Updated\\PerfectBabysitter-main\\PerfectBabysitter\\obj\\",
+      "projectPath": "C:\\Users\\Prince\\Documents\\COMP231\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj",
+      "packagesPath": "C:\\Users\\Prince\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Prince\\Documents\\COMP231\\PerfectBabysitter-main\\PerfectBabysitter\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Rohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Prince\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8624,6 +8620,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -8635,6 +8632,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -8679,7 +8677,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
