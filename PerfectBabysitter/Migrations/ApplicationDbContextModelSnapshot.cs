@@ -25,6 +25,9 @@ namespace PerfectBabysitter.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Activities")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -32,6 +35,12 @@ namespace PerfectBabysitter.Migrations
                     b.Property<string>("Children")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Cleaning")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Cooking")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Date")
                         .IsRequired()
@@ -41,6 +50,7 @@ namespace PerfectBabysitter.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EndTime")

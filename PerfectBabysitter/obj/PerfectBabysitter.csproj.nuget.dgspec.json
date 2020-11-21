@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Prince\\Documents\\COMP231\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
+    "C:\\Users\\Prince\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Prince\\Documents\\COMP231\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj": {
+    "C:\\Users\\Prince\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Prince\\Documents\\COMP231\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "projectUniqueName": "C:\\Users\\Prince\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
         "projectName": "PerfectBabysitter",
-        "projectPath": "C:\\Users\\Prince\\Documents\\COMP231\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "projectPath": "C:\\Users\\Prince\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
         "packagesPath": "C:\\Users\\Prince\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Prince\\Documents\\COMP231\\PerfectBabysitter-main\\PerfectBabysitter\\obj\\",
+        "outputPath": "C:\\Users\\Prince\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Prince\\AppData\\Roaming\\NuGet\\NuGet.Config",
