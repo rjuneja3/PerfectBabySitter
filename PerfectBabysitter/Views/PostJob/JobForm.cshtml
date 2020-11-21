@@ -25,12 +25,12 @@
     <div class="form-group">
         <label>Number of Children:</label>
         @Html.TextBoxFor(model => model.Children, new { @class = "form-control", @type = "number", @min = "1" })
-        @Html.ValidationMessageFor(model => model.Children, "", new { @class = "text-danger"})
+        @Html.ValidationMessageFor(model => model.Children, "", new { @class = "text-danger" })
     </div>
     <br />
     <div class="form-group">
         <label>Date:</label>
-        @Html.TextBoxFor(model => model.Date, new { @class = "form-control", @type = "date"})
+        @Html.TextBoxFor(model => model.Date, new { @class = "form-control", @type = "date" })
         @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
     </div>
     <br />
@@ -42,7 +42,6 @@
     <br />
     <div class="form-group">
         <label>Ending Time:</label>
-        <input asp-for="EndTime" type="time" class="form-control" />
         @Html.TextBoxFor(model => model.EndTime, new { @class = "form-control", @type = "time" })
         @Html.ValidationMessageFor(model => model.EndTime, "", new { @class = "text-danger" })
     </div>
@@ -54,9 +53,28 @@
     </div>
     <br />
     <div class="form-group">
+        <label>Housekeeping Duties (Optional)</label>
+        <div>
+            @Html.CheckBoxFor(model => model.Cooking, new { @class = "form-control" })
+            <label>Cooking</label>
+            <br />
+            @Html.CheckBoxFor(model => model.Cleaning, new { @class = "form-control" })
+            <label>Cleaning</label>
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <label>Day to Day Activities (Optional)</label>
+        <div>
+            @Html.TextBoxFor(model => model.Activities, new { @class = "form-control", style = "width:200px" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
         <label>Other Details (Optional)</label>
         <div>
-            @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "10", cols = "80",
+           style = "resize: none;"})
         </div>
     </div>
     <br />

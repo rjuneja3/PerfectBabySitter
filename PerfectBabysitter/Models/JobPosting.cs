@@ -22,17 +22,23 @@ namespace PerfectBabysitter.Models
         [Required(ErrorMessage = "Please specify the number of children to be looked after")]
         public int Children{get;set;}
 
-        [Required(ErrorMessage = "Please enter when your scheduling for")]
+        [Required(ErrorMessage = "Please enter when you are scheduling for")]
         public string Date{get;set;}
 
-        [Required(ErrorMessage = "Please enter time to start (include am or pm)")]
+        [Required(ErrorMessage = "Please enter the time to start (include am or pm)")]
         public string StartTime{get;set;}
 
-        [Required(ErrorMessage = "Please enter time to end (include am or pm)")]
+        [Required(ErrorMessage = "Please enter the time to end (include am or pm)")]
         public string EndTime{get;set;}
 
         [Required(ErrorMessage = "Please enter your preferred choice of language")]
         public string Language{get;set;}
+
+        public bool Cooking{get;set;}
+
+        public bool Cleaning{get;set;}
+
+        public string Activities{get;set;}
 
         public string Description{get;set;}
     }
