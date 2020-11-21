@@ -14,7 +14,7 @@ namespace PerfectBabysitter.Models
                 PhoneNumber ="38728233",
                 Email ="Rohansjads@gmail.com",
                 Address = "7843 Toronto",
-                Children = "2",
+                Children = 2,
                 Language = "",
                 Description =""
 
@@ -24,7 +24,7 @@ namespace PerfectBabysitter.Models
                 PhoneNumber ="38748338928233",
                 Email ="jkfdjdkf@gmail.com",
                 Address = "73 Toronto",
-                Children = "2",
+                Children = 2,
                 Language = "",
                 Description =""
 

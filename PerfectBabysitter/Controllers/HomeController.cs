@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PerfectBabysitter.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,53 @@ namespace PerfectBabysitter.Controllers
 {
     public class HomeController : Controller
     {
+        IJobPostingsRepository postRepository;
+        public HomeController(IJobPostingsRepository postRepo)
+        {
+            postRepository = postRepo;
+        }
+
         // GET: Item
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult SignIn()
+
+        // get details of job according to id
+        public ActionResult GetJob(int id)
         {
-            return View();
+            //sql to display job details on basis of id
+            JobPosting j = postRepository.JobPostings.Single(p => p.Id == id);
+            return View(j);
+        }
+
+  
+        [HttpGet]
+        public ViewResult EditJobPosting(int id)
+        {
+            return View(postRepository.JobPostings.Single(p => p.Id == id));
+        }
+
+        [HttpPost]
+        public IActionResult EditJobPosting(JobPosting jPosting, IEnumerable<int> checkResponse)
+        {
+            if (ModelState.IsValid)
+            {
+                // method needs to be implemented in repository
+                postRepository.AddPosting(jPosting);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(jPosting);
+            }
+        }
+
+        public IActionResult JobPosting(int id)
+        {
+            JobPosting deletedRecipe = postRepository.DeleteJobPosting(id);
+
+            return RedirectToAction("Index");
         }
     }
     

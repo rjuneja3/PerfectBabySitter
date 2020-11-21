@@ -8,5 +8,8 @@ namespace PerfectBabysitter.Models
     public interface IJobPostingsRepository
     {
         IQueryable<JobPosting> JobPostings { get; }
+
+        void AddPosting(JobPosting jPosting);
+        JobPosting DeleteJobPosting(int id);
     }
 }
