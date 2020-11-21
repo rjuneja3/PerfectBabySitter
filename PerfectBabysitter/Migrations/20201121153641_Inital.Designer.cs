@@ -9,8 +9,8 @@ using PerfectBabysitter.Models;
 namespace PerfectBabysitter.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201118010418_Initial")]
-    partial class Initial
+    [Migration("20201121153641_Inital")]
+    partial class Inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,6 +27,9 @@ namespace PerfectBabysitter.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Activities")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -34,6 +37,12 @@ namespace PerfectBabysitter.Migrations
                     b.Property<string>("Children")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Cleaning")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Cooking")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Date")
                         .IsRequired()
@@ -43,6 +52,7 @@ namespace PerfectBabysitter.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EndTime")

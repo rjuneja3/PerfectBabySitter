@@ -12,5 +12,6 @@ namespace PerfectBabysitter.Models
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         public DbSet<JobPosting> JobPostings { get; set; }
+        public DbSet<AppliedJob> AppliedJobs { get; set; }
     }
 }
