@@ -10,8 +10,10 @@ namespace PerfectBabysitter.Models
 {
     public class SeedData
     {
+
         public static void EnsurePopulated(IApplicationBuilder app)
         {
+
             ApplicationDbContext context = app.ApplicationServices.GetRequiredService<ApplicationDbContext>();
             context.Database.Migrate();
 
@@ -21,29 +23,35 @@ namespace PerfectBabysitter.Models
                     new JobPosting
                     {
                        
-                        PhoneNumber = "38728233",
-                        Email = "Rohansjads@gmail.com",
-                        Address = "7843 Toronto",
+                        PhoneNumber = "647-807-0111",
+                        Address = "25 College Street, Toronto",
+                        Email = "adammichelle@gmail.com",
                         Children = "2",
                         Language = "ENGLISH",
-                        Description = "blahblah",
-                        Date = "11/11/2019",
+                        Date = "21/11/2020",
                         EndTime = "11:59",
-                        StartTime =  "11:00"
+                        StartTime =  "11:00",
+                        Cooking = true,
+                        Cleaning =false,
+                        Activities = "Listening to music, Playing games",
+                        Description = "This is the first job posting sample"
 
                     },
                     new JobPosting
                     {
-                        
-                        PhoneNumber = "3243",
-                        Email = "test@gmail.com",
-                        Address = "111 Toronto",
-                        Children = "2",
-                        Language = "HINDI",
-                        Description = "blah blah",
-                        Date = "11/11/2019",
-                        EndTime = "11:59",
-                        StartTime = "11:00"
+
+                        PhoneNumber = "647-999-2321",
+                        Address = "300 Victoria Street, Toronto",
+                        Email = "randomstranger@gmail.com",
+                        Children = "5",
+                        Language = "FRENCH",
+                        Date = "20/11/2020",
+                        EndTime = "09:59",
+                        StartTime = "10:00",
+                        Cooking = true,
+                        Cleaning = true,
+                        Activities = "Driving, Playing games",
+                        Description = "This is the second job posting sample"
 
                     }
              ) ;

@@ -8,6 +8,7 @@ namespace PerfectBabysitter.Models
     public class EFAppliedJobRepository : IAppliedJobRepository
     {
         private ApplicationDbContext context;
+        
         public EFAppliedJobRepository(ApplicationDbContext ctx)
         {
             context = ctx;

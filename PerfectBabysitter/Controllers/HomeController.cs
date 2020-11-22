@@ -22,6 +22,11 @@ namespace PerfectBabysitter.Controllers
             return View();
         }
 
+        public ActionResult SignIn()
+        {
+            return View();
+        }
+
         // get details of job according to id
         public ActionResult GetJob(int id)
         {
@@ -54,7 +59,7 @@ namespace PerfectBabysitter.Controllers
 
         public IActionResult JobPosting(int id)
         {
-            JobPosting deletedRecipe = postRepository.DeleteJobPosting(id);
+            JobPosting deletedJobPosting = postRepository.DeleteJobPosting(id);
 
             return RedirectToAction("Index");
         }

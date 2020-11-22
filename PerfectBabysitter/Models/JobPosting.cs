@@ -8,6 +8,7 @@ namespace PerfectBabysitter.Models
 {
     public class JobPosting
     {
+       
         [Key]
         public int Id { get; set; }
 
