@@ -12,6 +12,9 @@ namespace PerfectBabysitter.Models
         [Key]
         public int Id { get; set; }
 
+        [Required(ErrorMessage = "Please enter a Job Title")]
+        public string JobTitle {get;set;}
+
         [Required(ErrorMessage = "Please enter a phone number")]
         [Phone(ErrorMessage = "Please enter a valid phone number")]
         public string PhoneNumber {get;set;}

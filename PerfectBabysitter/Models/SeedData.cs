@@ -23,6 +23,7 @@ namespace PerfectBabysitter.Models
                     new JobPosting
                     {
                        
+                        JobTitle = "Look after Twins",
                         PhoneNumber = "647-807-0111",
                         Address = "25 College Street, Toronto",
                         Email = "adammichelle@gmail.com",
@@ -40,6 +41,7 @@ namespace PerfectBabysitter.Models
                     new JobPosting
                     {
 
+                        JobTitle = "Watch over kids play date",
                         PhoneNumber = "647-999-2321",
                         Address = "300 Victoria Street, Toronto",
                         Email = "randomstranger@gmail.com",

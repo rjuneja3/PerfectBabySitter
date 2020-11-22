@@ -5,6 +5,12 @@
 
 <form asp-action="JobForm" onsubmit="return validateForm()" method="post">
     <div class="form-group">
+        <label for="JobTitle">Job Title:</label>
+        @Html.TextBoxFor(model => model.JobTitle, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.JobTitle, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="form-group">
         <label for="PhoneNumber">Phone Number:</label>
         @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
         @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
@@ -35,13 +41,13 @@
     </div>
     <br />
     <div class="form-group">
-        <label>Starting Time:</label>
+        <label>Starting Time: (please specify AM or PM)</label>
         @Html.TextBoxFor(model => model.StartTime, new { @class = "form-control", @type = "time" })
         @Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger" })
     </div>
     <br />
     <div class="form-group">
-        <label>Ending Time:</label>
+        <label>Ending Time: (please specify AM or PM)</label>
         @Html.TextBoxFor(model => model.EndTime, new { @class = "form-control", @type = "time" })
         @Html.ValidationMessageFor(model => model.EndTime, "", new { @class = "text-danger" })
     </div>
@@ -73,8 +79,13 @@
     <div class="form-group">
         <label>Other Details (Optional)</label>
         <div>
-            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "10", cols = "80",
-           style = "resize: none;"})
+            @Html.TextAreaFor(model => model.Description, new
+            {
+                @class = "form-control",
+                rows = "10",
+                cols = "80",
+           style = "resize: none;"
+            })
         </div>
     </div>
     <br />

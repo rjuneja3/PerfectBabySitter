@@ -28,6 +28,7 @@ namespace PerfectBabysitter.Models
                         .Single(p => p.Id == jPosting.Id);
                     if (jobEntry != null)
                     {
+                    jobEntry.JobTitle = jPosting.JobTitle;
                     jobEntry.Address = jPosting.Address;
                     jobEntry.Children = jPosting.Children;
                     jobEntry.Date = jPosting.Date;
