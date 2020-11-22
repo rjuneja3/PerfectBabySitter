@@ -688,3 +688,5 @@ C:\Users\Prince\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp
 C:\Users\Prince\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.Views.pdb
 C:\Users\Prince\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.csproj.CopyComplete
 C:\Users\Prince\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.genruntimeconfig.cache
+G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Search\SearchResults.cshtml.g.cs
+G:\PERFECT\Updated\PerfectBabysitter-main\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\JobSummary.cshtml.g.cs
