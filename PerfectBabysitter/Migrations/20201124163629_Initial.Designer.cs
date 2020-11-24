@@ -9,8 +9,8 @@ using PerfectBabysitter.Models;
 namespace PerfectBabysitter.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201124050809_initial")]
-    partial class initial
+    [Migration("20201124163629_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,9 +55,8 @@ namespace PerfectBabysitter.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Children")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Children")
+                        .HasColumnType("int");
 
                     b.Property<bool>("Cleaning")
                         .HasColumnType("bit");

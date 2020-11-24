@@ -2,7 +2,7 @@
 
 namespace PerfectBabysitter.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,7 +31,7 @@ namespace PerfectBabysitter.Migrations
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Children = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Children = table.Column<int>(type: "int", nullable: false),
                     Date = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StartTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EndTime = table.Column<string>(type: "nvarchar(max)", nullable: false),

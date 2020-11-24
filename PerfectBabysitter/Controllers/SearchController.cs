@@ -16,34 +16,71 @@ namespace PerfectBabysitter.Controllers
         {
             repository = repo;
         }
-
         [HttpGet]
-        public ViewResult SearchResults()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ViewResult SearchResults(JobsListViewModel j)
+        public ViewResult SearchAddress(string address)
         {
 
             ViewBag.Title = "Search Results";
-            JobsListViewModel result = new JobsListViewModel();
-            Debug.WriteLine(j.Keyword);
-            if (j.Keyword == "" || j.Keyword == null)
+            var results = from jobs in repository.JobPostings select jobs;
+            if (!string.IsNullOrEmpty(address))
             {
-                result.JobPostings = repository.JobPostings.Where(r => (r.Activities).Contains(j.Activities) || (r.Cleaning == j.Cleaning) || (r.Cooking == j.Cooking) || (r.Children == j.Children)).OrderBy(r => r.Id);
+                results = results.Where(r => r.Address.Contains(address));
             }
             else
             {
-                result.JobPostings = repository.JobPostings.Where(r => (j.Keyword == null) || (r.Address.Contains(j.Keyword)) ||
-                (r.Language.Contains(j.Keyword)) || (r.Activities).Contains(j.Activities) || (r.Cleaning == j.Cleaning) || (r.Cooking == j.Cooking) || (r.Children == j.Children)).OrderBy(r => r.Id);
+                results = results.OrderBy(r => r.Id);
+            }
+            JobsListViewModel jobListVM = new JobsListViewModel();
+            jobListVM.JobPostings = results;
+            jobListVM.Address = address;
+            return View("SearchResults", jobListVM);
+
+        }
+
+        [HttpGet]
+        public ViewResult SearchResults(string address, int children, bool householdDuties, bool cooking, bool cleaning, string activities)
+        {
+
+            ViewBag.Title = "Search Results";
+            var results = from jobs in repository.JobPostings select jobs;
+            if (!string.IsNullOrEmpty(address))
+            {
+                results = results.Where(r => r.Address.Contains(address));
+            }
+            if (!string.IsNullOrEmpty(children.ToString()) || children >= 1)
+            {
+                results = results.Where(r => r.Children <= children);
             }
 
-            result.Keyword = j.Keyword;
+            if (householdDuties != null && householdDuties == true)
+            {
+                if (!string.IsNullOrEmpty(cooking.ToString()))
+                {
+                    results = results.Where(r => r.Cooking == cooking);
+                }
+                if (!string.IsNullOrEmpty(cleaning.ToString()))
+                {
+                    results = results.Where(r => r.Cleaning == cleaning);
+                }
+            }
+            else if (householdDuties != null && householdDuties == false)
+            {
+                results = results.Where(r => r.Cleaning == false && r.Cooking == false);
+            }
 
-            return View("SearchResults", result);
-        
+            if (!string.IsNullOrEmpty(activities))
+            {
+                results = results.Where(r => r.Activities.Contains(activities));
+            }
+            JobsListViewModel jobListVM = new JobsListViewModel();
+            jobListVM.JobPostings = results;
+            jobListVM.Address = address;
+            jobListVM.Children = children.ToString();
+            jobListVM.Cooking = cooking;
+            jobListVM.Cleaning = cleaning;
+            jobListVM.Activities = activities;
+            return View("SearchResults", jobListVM);
+
         }
     }
 }

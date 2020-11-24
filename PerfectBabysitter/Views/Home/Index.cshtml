@@ -1,7 +1,5 @@
 ﻿@model JobsListViewModel;
-@{
-    ViewData["Title"] = "Index";
-}
+@{ ViewData["Title"] = "Index"; }
 
 
 <!-- Masthead -->
@@ -13,10 +11,11 @@
                 <h1 class="mb-5">Welcome to the best website to find babysitters online at an affordable price!</h1>
             </div>
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                <form asp-controller="Search" asp-action="SearchResults">
+                <form asp-controller="Search" asp-action="SearchAddress" method="get">
                     <div class="form-row">
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            <input asp-for="Keyword" type="search" class="form-control form-control-lg" placeholder="Search..">
+                            <input asp-for="Address" type="text" class="form-control form-control-lg" placeholder="Search..">
+
                         </div>
                         <div class="col-12 col-md-3" type="email" style="">
                             <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>

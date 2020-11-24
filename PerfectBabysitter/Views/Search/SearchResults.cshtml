@@ -11,25 +11,26 @@
             </div>
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                 <!--search-->
-                <form asp-controller="Search" asp-action="SearchResults">
+                <form asp-controller="Search" asp-action="SearchResults" method="get">
                     <div class="form-row">
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            keyword
-                            <input asp-for="Keyword" type="search" class="form-control form-control-lg" placeholder="Search..">
+                            Address
+                            <input asp-for="Address" type="text" class="form-control form-control-lg" placeholder="Search..">
                         </div>
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
                             Number of children
-                            <input asp-for="Children" type="search" class="form-control form-control-lg" placeholder="Number of children">
+                            <input asp-for="Children" type="number" min="1" class="form-control form-control-lg" placeholder="Number of children">
                         </div>
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            household duties
-                            <input asp-for="Cooking"  class="form-control form-control-lg" >Cooking
-                            <input asp-for="Cleaning" class="form-control form-control-lg" >Cleaning
+                            <input type="radio" asp-for="HouseholdDuties" value="false" />No Household Duties
+                            <input type="radio" asp-for="HouseholdDuties" value="true" />Household duties
+                            <input asp-for="Cooking" class="form-control form-control-lg">Cooking
+                            <input asp-for="Cleaning" class="form-control form-control-lg">Cleaning
                         </div>
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            activities
-                            <input asp-for="Activities" type="search" class="form-control form-control-lg" placeholder="Activities"> 
-                           
+                            Day-to-Day Activities
+                            <input asp-for="Activities" type="search" class="form-control form-control-lg" placeholder="Activities">
+
                         </div>
                         <div class="col-12 col-md-3" type="button" style="">
                             <p><br /> <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button> </p>
@@ -47,12 +48,10 @@
         @if (Model.JobPostings.Any())
         {
             @foreach (var r in Model.JobPostings)
-            {@Html.Partial("JobSummary", r)}
-        }
-        else
-        {
+            {@Html.Partial("JobSummary", r)} }
+         else
+         {
             <h4>Sorry</h4>
-            <p class="w3-text-grey">We couldn't find any jobs.</p>
-        }
+            <p class="w3-text-grey">We couldn't find any jobs.</p>}
     </div>
 </div>
