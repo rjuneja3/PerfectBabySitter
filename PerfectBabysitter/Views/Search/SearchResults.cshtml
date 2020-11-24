@@ -1,9 +1,4 @@
 ﻿@model JobsListViewModel;
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
 
 
 <!-- Masthead -->
@@ -15,13 +10,29 @@
                 <h1 class="mb-5">Welcome to the best website to find babysitters online at an affordable price!</h1>
             </div>
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                <form>
+                <!--search-->
+                <form asp-controller="Search" asp-action="SearchResults">
                     <div class="form-row">
                         <div class="col-12 col-md-9 mb-2 mb-md-0">
-                            <input type="search" class="form-control form-control-lg" placeholder="Search..">
+                            keyword
+                            <input asp-for="Keyword" type="search" class="form-control form-control-lg" placeholder="Search..">
                         </div>
-                        <div class="col-12 col-md-3" type="email" style="">
-                            <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
+                        <div class="col-12 col-md-9 mb-2 mb-md-0">
+                            Number of children
+                            <input asp-for="Children" type="search" class="form-control form-control-lg" placeholder="Number of children">
+                        </div>
+                        <div class="col-12 col-md-9 mb-2 mb-md-0">
+                            household duties
+                            <input asp-for="Cooking"  class="form-control form-control-lg" >Cooking
+                            <input asp-for="Cleaning" class="form-control form-control-lg" >Cleaning
+                        </div>
+                        <div class="col-12 col-md-9 mb-2 mb-md-0">
+                            activities
+                            <input asp-for="Activities" type="search" class="form-control form-control-lg" placeholder="Activities"> 
+                           
+                        </div>
+                        <div class="col-12 col-md-3" type="button" style="">
+                            <p><br /> <button type="submit" class="btn btn-block btn-lg btn-primary">Search</button> </p>
                         </div>
                     </div>
                 </form>
@@ -38,6 +49,10 @@
             @foreach (var r in Model.JobPostings)
             {@Html.Partial("JobSummary", r)}
         }
+        else
+        {
+            <h4>Sorry</h4>
+            <p class="w3-text-grey">We couldn't find any jobs.</p>
+        }
     </div>
 </div>
-</section>

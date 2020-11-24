@@ -59,6 +59,7 @@ namespace PerfectBabysitter.Controllers
 
         public IActionResult JobPosting(int id)
         {
+            // temp 
             JobPosting deletedJobPosting = postRepository.DeleteJobPosting(id);
 
             return RedirectToAction("Index");
