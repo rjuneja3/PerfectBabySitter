@@ -9,6 +9,14 @@ namespace PerfectBabysitter.Controllers
 {
     public class PostJobController : Controller
     {
+
+        private IJobPostingsRepository repository;
+
+        public PostJobController(IJobPostingsRepository repo)
+        {
+            repository = repo;
+        }
+
         [HttpGet]
         public ViewResult JobForm()
         {
@@ -34,7 +42,7 @@ namespace PerfectBabysitter.Controllers
         }
         public ActionResult ViewJobs()
         {
-            return View();
+            return View("ViewJobs", repository.JobPostings);
         }
     }
 }
