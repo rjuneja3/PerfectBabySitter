@@ -998,3 +998,4 @@ D:\Рабочий стол\Jake3\PerfectBabysitter\PerfectBabysitter\obj\Debug\n
 D:\Рабочий стол\Jake3\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.dll
 D:\Рабочий стол\Jake3\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.pdb
 D:\Рабочий стол\Jake3\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.genruntimeconfig.cache
+D:\Рабочий стол\Jake3\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\AppliedJobs\AppliedJobsView.cshtml.g.cs
