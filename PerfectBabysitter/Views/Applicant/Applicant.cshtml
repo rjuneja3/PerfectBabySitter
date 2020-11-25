@@ -3,40 +3,57 @@
 
 <div>
     <div>
-        <h1>Applicant Info</h1>
+        <h1 style="text-align: center;">Applicant Info</h1>
     </div>
-    <table>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(Model => Model.ApplicantName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(Model => Model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(Model => Model.Status)
-            </th>
-            <th></th>
-        </tr>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="max-width: none; max-height: none; width: 1120.33px; height: 532.736px;">
+                <table class="table" style="">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.ApplicantName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.Id)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.Status)
+                        </th>
+                        <th></th>
+                    </tr>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ApplicantName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status)
-                </td>
-                <td>
-                    <button class="button button1">Accept</button>
-                    <button class="button button1"> Decline</button>
-
-                </td>
-            </tr>
-        }
-    </table>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ApplicantName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <form asp-action="Applicant" asp-controller="Applicant" method="post">
+                                            <input hidden name="jobId" value="@item.Id" />
+                                            <input hidden name="status" value="Accepted" />
+                                            <button class="btn btn-primary" style="padding: 8px; box-shadow: rgba(38, 143, 255, 0.42) 1px 0px 0px 3px; text-shadow: none; border-width: 1px;">Accept</button>
+                                        </form>
+                                        <form asp-action="Applicant" asp-controller="Applicant" method="post">
+                                            <input hidden name="jobId" value="@item.Id" />
+                                            <input hidden name="status" value="Declined" />
+                                            <button class="btn btn-secondary" style="box-shadow: rgba(130, 138, 145, 0.204) -2px 2px 5px 0px; text-shadow: none; padding: 8px; margin: 0px 0px 0px 27px;"> Decline</button>
+                                        </form>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
 </div>

@@ -22,5 +22,14 @@ namespace PerfectBabysitter.Controllers
             return View(repository.AppliedJobs);
         }
 
+        [HttpPost]
+        public ActionResult Applicant(int jobId, string status)
+        {
+            AppliedJob aJob = repository.AppliedJobs.FirstOrDefault(j => j.Id == jobId);
+            repository.UpdateStatus(aJob, status);
+            return View(repository.AppliedJobs);
+        }
+
+
     }
 }
