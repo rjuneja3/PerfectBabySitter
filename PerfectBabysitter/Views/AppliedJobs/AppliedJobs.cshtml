@@ -3,7 +3,7 @@
 
 @foreach (AppliedJob ajb in Model)
 {
-  //  @if (ajb.Status=="true") {
+    @if (ajb.Status=="true") {
     <div class="card m-3" style="min-width:18rem; max-width:30.5%; max-height:11rem; min-height:11rem;">
         <div class="carousel-fade" style="height:10rem">
             <h2>@ajb.Id</h2>
@@ -12,5 +12,5 @@
             <h3>@ajb.JobId</h3>
         </div>
     </div>
-    //    }
+        }
     }
