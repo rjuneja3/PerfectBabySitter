@@ -1,0 +1,41 @@
+﻿@model JobPosting
+    
+
+<style>
+
+    .ReidBox {
+        border: 3px solid pink;
+        box-shadow: 5px 6px hotpink;
+        align-content: center;
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+    }
+
+
+</style>
+
+<div class="ReidBox" style="min-width:18rem; max-width:60.5%; max-height:19rem; min-height:19rem;">
+    <div class="carousel-fade" style="height:10rem">
+        <h2>@Model.JobTitle</h2>
+        <h3>Contact Information:</h3>
+        <h3>@Model.PhoneNumber</h3>
+        <h3>@Model.Language</h3>
+        <h3>@Model.Description</h3>
+
+        <form asp-controller="Search" asp-action="SearchAddress" method="get">
+
+
+            <input hidden name="jobId" value="@Model.Id" />
+
+
+            <button style="width: 50%; align-content: center;  "type="submit" class="btn btn-block btn-lg btn-primary">Apply</button>
+
+
+        </form>
+    </div>
+
+   
+
+</div>}

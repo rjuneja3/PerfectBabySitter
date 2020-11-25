@@ -38,9 +38,6 @@ namespace PerfectBabysitter.Models
                     jobEntry.Language = jPosting.Language;
                     jobEntry.PhoneNumber = jPosting.PhoneNumber;
                     jobEntry.StartTime = jPosting.StartTime;
-                    jobEntry.Activities = jPosting.Activities;
-                    jobEntry.Cleaning = jPosting.Cleaning;
-                    jobEntry.Cooking = jPosting.Cooking;
                     
                     }
                 }

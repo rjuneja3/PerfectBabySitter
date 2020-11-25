@@ -53,9 +53,8 @@ namespace PerfectBabysitter.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Children")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Children")
+                        .HasColumnType("int");
 
                     b.Property<bool>("Cleaning")
                         .HasColumnType("bit");

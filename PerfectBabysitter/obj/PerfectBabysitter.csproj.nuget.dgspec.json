@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Рабочий стол\\Jake3\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "D:\\Рабочий стол\\Jake3\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "D:\\Рабочий стол\\Jake3\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
+=======
+    "C:\\Users\\REIDR\\Downloads\\PerfectBabysitter-main (3)\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\REIDR\\Downloads\\PerfectBabysitter-main (3)\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\REIDR\\Downloads\\PerfectBabysitter-main (3)\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "projectName": "PerfectBabysitter",
+        "projectPath": "C:\\Users\\REIDR\\Downloads\\PerfectBabysitter-main (3)\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "packagesPath": "C:\\Users\\REIDR\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\REIDR\\Downloads\\PerfectBabysitter-main (3)\\PerfectBabysitter-main\\PerfectBabysitter\\obj\\",
+>>>>>>> 954409e61cef925b97bc0910f58c93cabaea432e
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

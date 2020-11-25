@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "QRrsGiDVcK4BqRJKatUELhQfemjYsenTUiHA4pjE6ooMUup6jdo1mD+9Zaj9l/n9MLuEel+MVTtK6OoAF/YnSA==",
   "success": true,
   "projectFilePath": "D:\\Рабочий стол\\Jake3\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+=======
+  "dgSpecHash": "narZLhKMzQJ90tgkSxwKhR7H5BuhbeFs4D98PmyAtOzj9XVXNAZVIZE8+P0DUsc9FC7XDiFr6jXDR6FmbQXEpg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\REIDR\\Downloads\\PerfectBabysitter-main (3)\\PerfectBabysitter-main\\PerfectBabysitter\\PerfectBabysitter.csproj",
+>>>>>>> 954409e61cef925b97bc0910f58c93cabaea432e
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

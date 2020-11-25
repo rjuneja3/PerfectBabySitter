@@ -9,12 +9,8 @@ using PerfectBabysitter.Models;
 namespace PerfectBabysitter.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-<<<<<<< HEAD:PerfectBabysitter/Migrations/20201124010822_initial.Designer.cs
-    [Migration("20201124010822_initial")]
-=======
-    [Migration("20201124232859_initial")]
->>>>>>> 954409e61cef925b97bc0910f58c93cabaea432e:PerfectBabysitter/Migrations/20201124232859_initial.Designer.cs
-    partial class initial
+    [Migration("20201125032514_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
