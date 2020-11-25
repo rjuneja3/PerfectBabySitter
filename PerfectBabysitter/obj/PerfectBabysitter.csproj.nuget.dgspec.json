@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
+    "G:\\PERFECT\\New folder\\Test\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
   },
   "projects": {
-    "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
+    "G:\\PERFECT\\New folder\\Test\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "projectUniqueName": "G:\\PERFECT\\New folder\\Test\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
         "projectName": "PerfectBabysitter",
-        "projectPath": "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "projectPath": "G:\\PERFECT\\New folder\\Test\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
         "packagesPath": "C:\\Users\\Rohan\\.nuget\\packages\\",
-        "outputPath": "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
+        "outputPath": "G:\\PERFECT\\New folder\\Test\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
