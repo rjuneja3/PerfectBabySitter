@@ -82,5 +82,12 @@ namespace PerfectBabysitter.Controllers
             return View("SearchResults", jobListVM);
 
         }
+
+        [HttpGet]
+        public ViewResult JobDetails(int jobId)
+        {
+            JobPosting JobPosting = repository.JobPostings.Where(r => r.Id == jobId).FirstOrDefault();
+            return View(JobPosting);
+        }
     }
 }

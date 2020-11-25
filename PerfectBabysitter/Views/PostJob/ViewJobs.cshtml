@@ -1,13 +1,30 @@
 ﻿@model IEnumerable<JobPosting>
 
+    <style>
+
+        .ReidBox {
+            border: 3px solid pink;
+            box-shadow: 5px 6px hotpink;
+            align-content: center;
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+        }
+    </style>
+
+
 @foreach (JobPosting jb in Model)
 {
-    <div class="card m-3" style="min-width:18rem; max-width:30.5%; max-height:11rem; min-height:11rem;">
-        <div class="carousel-fade" style="height:10rem">
-            <h2>@jb.Id</h2>
+    <div class="ReidBox" style="min-width:18rem; max-width:30.5%;  min-height:19rem;">
+        <div class="carousel-fade" style="height:17rem">
+            <h2>@jb.JobTitle</h2>
             <h3>@jb.PhoneNumber</h3>
             <h3>@jb.Language</h3>
             <h3>@jb.Description</h3>
+            <h3>@Html.Partial("JobSummary", jb)</h3>
+
+           
         </div>
     </div>
 }
