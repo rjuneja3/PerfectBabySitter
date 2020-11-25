@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AppliedJob>
+
+
+<div>
+    <div>
+        <h1>Applicant Info</h1>
+    </div>
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.ApplicantName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Model => Model.Status)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApplicantName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    <button class="button button1">Accept</button>
+                    <button class="button button1"> Decline</button>
+
+                </td>
+            </tr>
+        }
+    </table>
+</div>
