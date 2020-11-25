@@ -14,9 +14,9 @@ namespace PerfectBabysitter.Controllers
         public AppliedJobController(IAppliedJobRepository repo) {
             repository = repo;
         }
-        public ActionResult AppliedJobsView()
+        public ViewResult AppliedJobs()
         {
-            return View("AppliedJobsView", repository.AppliedJobs);
+            return View("~/Views/AppliedJobs/AppliedJobs.cshtml", repository.AppliedJobs);
         }
     }
 }
