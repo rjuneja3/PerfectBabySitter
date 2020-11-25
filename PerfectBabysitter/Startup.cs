@@ -26,7 +26,6 @@ namespace PerfectBabysitter
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:PerfectBabySitter:ConnectionString"]));
             services.AddTransient<IJobPostingsRepository, EFJobPostingsRepository>();
-            services.AddTransient<IAppliedJobRepository, EFAppliedJobRepository>();
             services.AddMvc();
            
         }

@@ -9,11 +9,12 @@ namespace PerfectBabysitter.Controllers
 {
     public class PostJobController : Controller
     {
-        private IJobPostingsRepository repository;  
+
+        private IJobPostingsRepository repository;
 
         public PostJobController(IJobPostingsRepository repo)
         {
-            repository = repo;         
+            repository = repo;
         }
 
         [HttpGet]
