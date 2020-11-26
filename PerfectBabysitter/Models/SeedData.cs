@@ -22,7 +22,7 @@ namespace PerfectBabysitter.Models
                 context.JobPostings.AddRange(
                     new JobPosting
                     {
-                       
+
                         JobTitle = "Look after Twins",
                         PhoneNumber = "647-807-0111",
                         Address = "25 College Street, Toronto",
@@ -31,9 +31,9 @@ namespace PerfectBabysitter.Models
                         Language = "ENGLISH",
                         Date = "21/11/2020",
                         EndTime = "11:59",
-                        StartTime =  "11:00",
+                        StartTime = "11:00",
                         Cooking = true,
-                        Cleaning =false,
+                        Cleaning = false,
                         Activities = "Listening to music, Playing games",
                         Description = "This is the first job posting sample"
 
@@ -56,10 +56,33 @@ namespace PerfectBabysitter.Models
                         Description = "This is the second job posting sample"
 
                     }
-             ) ;
-            
+             );
+
+            }
+
+            if (!context.AppliedJobs.Any())
+            {
+                context.AppliedJobs.AddRange(
+                    new AppliedJob
+                    {
+                        ApplicantName = "John Cash",
+                        JobId = 1,
+                        Status = "Accepeted",
+                        AppliedStatus="Applied"
+
+                    },
+                    new AppliedJob
+                    {
+                        ApplicantName = "Jake",
+                        JobId = 2,
+                        Status = "Declined",
+                        AppliedStatus="Applied"
+                    }
+                    );
+            }
+
             context.SaveChanges();
+
         }
     }
-}
 }

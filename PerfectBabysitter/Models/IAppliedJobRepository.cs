@@ -10,6 +10,7 @@ namespace PerfectBabysitter.Models
         IQueryable<AppliedJob> AppliedJobs { get; }
         AppliedJob Add(AppliedJob job);
         void UpdateStatus(AppliedJob job, string status);
+        void UpdateAppliedStatus(AppliedJob job, string status);
         
     }
 }

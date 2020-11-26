@@ -28,6 +28,9 @@ namespace PerfectBabysitter.Migrations
                     b.Property<string>("ApplicantName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("AppliedStatus")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("JobId")
                         .HasColumnType("int");
 
