@@ -28,9 +28,24 @@ namespace PerfectBabysitter.Models
                 if(jobentry != null)
                 {
                     jobentry.Status = status;
+                    jobentry.AppliedStatus = status;
                 }
             }
             context.SaveChanges();
         }
+
+        public void UpdateAppliedStatus(AppliedJob job, string status)
+        {
+            if (job != null)
+            {
+                AppliedJob appliedJob = context.AppliedJobs.Where(r => r.JobId == job.JobId).FirstOrDefault();
+                if (appliedJob != null)
+                {
+                    appliedJob.AppliedStatus = status;
+                }
+            }
+            context.SaveChanges();
+        }
+
     }
 }

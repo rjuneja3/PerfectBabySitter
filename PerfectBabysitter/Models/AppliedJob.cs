@@ -13,6 +13,7 @@ namespace PerfectBabysitter.Models
         public int JobId { get; set; }
         public string ApplicantName { get; set; }
         public string Status { get; set; }
+        public string AppliedStatus { get; set; }
 
 
 

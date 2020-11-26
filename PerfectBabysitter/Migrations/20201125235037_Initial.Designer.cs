@@ -9,7 +9,7 @@ using PerfectBabysitter.Models;
 namespace PerfectBabysitter.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201125174241_Initial")]
+    [Migration("20201125235037_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,6 +28,9 @@ namespace PerfectBabysitter.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("ApplicantName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AppliedStatus")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("JobId")

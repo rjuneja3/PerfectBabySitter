@@ -14,7 +14,8 @@ namespace PerfectBabysitter.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     JobId = table.Column<int>(type: "int", nullable: false),
                     ApplicantName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AppliedStatus = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

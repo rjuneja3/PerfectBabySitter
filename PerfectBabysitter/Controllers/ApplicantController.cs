@@ -22,6 +22,16 @@ namespace PerfectBabysitter.Controllers
             return View(repository.AppliedJobs);
         }
 
+        public ViewResult ApplicantList() 
+        {
+            return View("~/Views/ApplicantList/ApplicantList.cshtml", repository.AppliedJobs);
+        }
+
+        public ViewResult AppliedJobs() 
+        {
+            return View("~/Views/Applicant/AppliedJobs.cshtml", repository.AppliedJobs);
+        }
+
         [HttpPost]
         public ActionResult Applicant(int jobId, string status)
         {
@@ -30,6 +40,13 @@ namespace PerfectBabysitter.Controllers
             return View(repository.AppliedJobs);
         }
 
+        [HttpPost]
+        public ActionResult AppliedJobs(int jobId, string status)
+        {
+            AppliedJob aJob = repository.AppliedJobs.FirstOrDefault(j => j.Id == jobId);
+            repository.UpdateAppliedStatus(aJob, status);
+            return View(repository.AppliedJobs);
+        }
 
     }
 }
