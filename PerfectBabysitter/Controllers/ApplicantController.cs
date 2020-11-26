@@ -12,6 +12,8 @@ namespace PerfectBabysitter.Controllers
     public class ApplicantController : Controller
     {
         private IAppliedJobRepository repository;
+        //add repo/db for Applicant/Account
+
         public ApplicantController(IAppliedJobRepository repo)
         {
             repository = repo;
@@ -47,6 +49,16 @@ namespace PerfectBabysitter.Controllers
             repository.UpdateAppliedStatus(aJob, status);
             return View(repository.AppliedJobs);
         }
+
+        public ActionResult Details(int Id)  
+        {  
+            //replace commented code with what you use to access Applicant database (when repo is setup)
+
+            /*Info info = new Info();  
+            info = db.Info.Find(Id);
+            return PartialView("ApplicantDetails",info);  */
+            return PartialView("ApplicantDetails");
+        }  
 
     }
 }

@@ -67,7 +67,7 @@ namespace PerfectBabysitter.Models
                     {
                         ApplicantName = "John Cash",
                         JobId = 1,
-                        Status = "Accepeted",
+                        Status = "Accepted",
                         AppliedStatus="Applied"
 
                     },
