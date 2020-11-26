@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Рабочий стол\\Fourth Semester\\Software Development Project 1 - COMP 231\\Project\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
+    "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
   },
   "projects": {
-    "D:\\Рабочий стол\\Fourth Semester\\Software Development Project 1 - COMP 231\\Project\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
+    "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Рабочий стол\\Fourth Semester\\Software Development Project 1 - COMP 231\\Project\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "projectUniqueName": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
         "projectName": "PerfectBabysitter",
-        "projectPath": "D:\\Рабочий стол\\Fourth Semester\\Software Development Project 1 - COMP 231\\Project\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Рабочий стол\\Fourth Semester\\Software Development Project 1 - COMP 231\\Project\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
+        "projectPath": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "packagesPath": "C:\\Users\\Geerththan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Geerththan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -84,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
