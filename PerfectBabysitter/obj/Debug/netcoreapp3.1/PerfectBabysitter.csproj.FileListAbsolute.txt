@@ -1836,3 +1836,6 @@ C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Deb
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Applicant\ApplicantDetails.cshtml.g.cs
+G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\ApplicantList\ApplicantList.cshtml.g.cs
+G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Applicant\ApplicantDetails.cshtml.g.cs
+G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Applicant\AppliedJobs.cshtml.g.cs

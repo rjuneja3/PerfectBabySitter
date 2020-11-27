@@ -52,12 +52,10 @@ namespace PerfectBabysitter.Controllers
 
         public ActionResult Details(int Id)  
         {  
-            //replace commented code with what you use to access Applicant database (when repo is setup)
-
-            /*Info info = new Info();  
-            info = db.Info.Find(Id);
-            return PartialView("ApplicantDetails",info);  */
-            return PartialView("ApplicantDetails");
+            
+           AppliedJob info = new AppliedJob();
+           info = repository.AppliedJobs.Where(r => r.Id == Id).FirstOrDefault();
+            return PartialView("ApplicantDetails", info);
         }  
 
     }
