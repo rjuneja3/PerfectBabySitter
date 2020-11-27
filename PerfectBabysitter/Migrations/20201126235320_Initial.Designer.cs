@@ -9,7 +9,7 @@ using PerfectBabysitter.Models;
 namespace PerfectBabysitter.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201126202739_Initial")]
+    [Migration("20201126235320_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

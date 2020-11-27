@@ -1,4 +1,4 @@
-﻿@*Include @model with Applicant's/Accounts Information*@
+﻿@model AppliedJob
 
 <div>
     <div class="modal-header">
@@ -7,31 +7,22 @@
     </div>
     <hr />
     <dl class="dl-horizontal">
-        @*Enter whatever fields the database has*@
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
 
-        @* <dt>
-                @Html.DisplayNameFor(model => model.Name)
-            </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicantName)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Name)
-            </dd>
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantName)
+        </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Mobile)
-            </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.Mobile)
-            </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Address)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.Address)
-            </dd>
-        *@
     </dl>
 </div>
