@@ -9,8 +9,8 @@ using PerfectBabysitter.Models;
 namespace PerfectBabysitter.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201126235320_Initial")]
-    partial class Initial
+    [Migration("20201128013558_Initials")]
+    partial class Initials
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -68,6 +68,10 @@ namespace PerfectBabysitter.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Date")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DatePosted")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

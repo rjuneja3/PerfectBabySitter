@@ -32,6 +32,10 @@ namespace PerfectBabysitter.Models
         [Required(ErrorMessage = "Please enter when you are scheduling for")]
         public string Date{get;set;}
 
+        //Gets and sets the date of posting the job
+        [Required(ErrorMessage = "Please enter today's date")]
+        public string DatePosted { get; set; }
+
         [Required(ErrorMessage = "Please enter the time to start (include am or pm)")]
         public string StartTime{get;set;}
 
