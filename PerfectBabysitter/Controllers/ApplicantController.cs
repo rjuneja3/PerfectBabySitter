@@ -56,7 +56,10 @@ namespace PerfectBabysitter.Controllers
            AppliedJob info = new AppliedJob();
            info = repository.AppliedJobs.Where(r => r.Id == Id).FirstOrDefault();
             return PartialView("ApplicantDetails", info);
-        }  
+        }
+
+
+       
 
     }
 }
