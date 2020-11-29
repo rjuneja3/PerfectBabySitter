@@ -22,10 +22,7 @@ namespace PerfectBabysitter.Controllers
             return View();
         }
 
-        public ActionResult SignIn()
-        {
-            return View();
-        }
+      
 
         // get details of job according to id
         public ActionResult GetJob(int id)
@@ -63,6 +60,18 @@ namespace PerfectBabysitter.Controllers
             JobPosting deletedJobPosting = postRepository.DeleteJobPosting(id);
 
             return RedirectToAction("Index");
+        }
+        public IActionResult Error(int? statusCode = null)
+        {
+            if (statusCode.HasValue)
+            {
+                if (statusCode.Value == 404 || statusCode.Value == 500)
+                {
+                    var viewName = statusCode.ToString();
+                    return View(viewName);
+                }
+            }
+            return View();
         }
     }
     
