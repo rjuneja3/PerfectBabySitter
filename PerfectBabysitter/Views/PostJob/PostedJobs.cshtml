@@ -43,7 +43,10 @@
                                         </form>
                                         &nbsp;
                                         <form asp-controller="PostJob" method="post">
-                                            <a href="javascript:void(0);" class="anchorDetail" data-id="@item.Id">Details</a>
+                                            <a href="javascript:void(0);" class="anchorDetail" data-id="@item.Description">Details</a>
+                                        </form>
+                                        <form>
+                                            <a href="javascript:void(0);" class="anchorDetail" data-id="@item.Description">Edit</a>
                                         </form>
                                     </tr>
                                 </table>
