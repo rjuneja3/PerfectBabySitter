@@ -40,10 +40,16 @@
 
     <!-- Appending File Uploader Using JS-->
     <script>
-        var htmlCode =
+       var htmlCode =
             `<div id="fileUploader"
-                                                <label class="label">Upload Resume</label>
-                                               <input class="btn btn--radius-2 btn--blue" id="file" type="file" onchange="SaveFile(this)" ></div>`
+
+                   <label class="label">Upload Resume</label>
+                    <div id="error"></div>
+                    <form method="post" action="/pdfs"  enctype="multipart/form-data">
+                      <input type="file" class="form-control-file"  name="fileName" accept=".pdf"  onchange="validate_fileupload(this);" />
+                    </form>
+              
+            </div>`
 
         function createElement(str) {
             var frag = document.createDocumentFragment();

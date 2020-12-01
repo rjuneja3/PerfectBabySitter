@@ -23,6 +23,11 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.form-control-file,
+.form-control-range {
+    display: block;
+    width: 100%;
+}
 
 .row-space {
   -webkit-box-pack: justify;
