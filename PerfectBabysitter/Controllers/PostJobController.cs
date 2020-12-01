@@ -44,5 +44,10 @@ namespace PerfectBabysitter.Controllers
         {
             return View("ViewJobs", repository.JobPostings);
         }
+
+        public ViewResult PostedJobs()
+        {
+            return View("PostedJobs", repository.JobPostings);
+        }
     }
 }

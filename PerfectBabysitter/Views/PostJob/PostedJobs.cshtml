@@ -34,7 +34,19 @@
                                 @Html.DisplayFor(modelItem => item.DatePosted)
                             </td>
                             <td>
-                                
+                                <table>
+                                    <tr>
+                                        <form asp-controller="PostJob" method="post">
+                                            <input hidden name="jobTitle" value="@item.JobTitle" />
+                                            <input hidden name="description" value="@item.Description" />
+                                            <input hidden name="datePosted" value="@item.DatePosted"/>
+                                        </form>
+                                        &nbsp;
+                                        <form asp-controller="PostJob" method="post">
+                                            <a href="javascript:void(0);" class="anchorDetail" data-id="@item.Id">Details</a>
+                                        </form>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
                     }
