@@ -1,0 +1,80 @@
+﻿@if (IsSectionDefined("scripts"))
+{
+    RenderSection("scripts");
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Title Page-->
+    <title>@ViewBag.Title</title>
+   
+    <!-- Icons font CSS-->
+    <link href="~/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="~/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="~/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="~/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="~/css/RegistrationForm.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    @RenderBody()
+    <!-- Jquery JS-->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="~/vendor/select2/select2.min.js"></script>
+    <script src="~/vendor/datepicker/moment.min.js"></script>
+    <script src="~/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Appending File Uploader Using JS-->
+    <script>
+        var htmlCode =
+            `<div id="fileUploader"
+                                                <label class="label">Upload Resume</label>
+                                               <input class="btn btn--radius-2 btn--blue" id="file" type="file" onchange="SaveFile(this)" ></div>`
+
+        function createElement(str) {
+            var frag = document.createDocumentFragment();
+            var elem = document.createElement('div');
+            elem.innerHTML = str;
+            while (elem.childNodes[0]) {
+                frag.appendChild(elem.childNodes[0]);
+            }
+            return frag;
+        }
+
+        let fragment = createElement(htmlCode)
+
+        function addCode() {
+            var s = document.getElementById('accountType');
+            var accountType = s.options[s.selectedIndex].value;
+            if (accountType == "babysitterOptn") {
+                let fragment = createElement(htmlCode)
+                document.getElementById('pdfUploader').appendChild(fragment);
+            }
+            else if (accountType == "parentOptn") {
+
+                var removeUploader = document.getElementById("fileUploader");
+                removeUploader.remove();
+            }
+        }
+    </script>
+    <!-- Main JS-->
+    <script src="~/js/global.js"></script>
+ 
+</body>
+
+</html>
+<!-- end document-->
