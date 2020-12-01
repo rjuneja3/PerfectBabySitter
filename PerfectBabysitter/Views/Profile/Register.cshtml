@@ -77,28 +77,33 @@
                                 <div class="select-dropdown"></div>
                             </div>
                         </div>
-                        
                         <script>
-                            async function SaveFile(inp) 
-                            {
-                                let user = { name:'john', age:34 };
-                                let formData = new FormData();
-                                let photo = inp.files[0];      
-         
-                                formData.append("resume", resume);
-                                formData.append("user", JSON.stringify(user));  
-    
-                                try {
-                                   let r = await fetch('/upload/resume', {method: "POST", body: formData}); 
-                                   console.log('HTTP response code:',r.status); 
-                                } catch(e) {
-                                   console.log('Huston we have problem...:', e);
+                            var valid = false;
+
+                            function validate_fileupload(input_element) {
+                                var el = document.getElementById("error");
+                                var fileName = input_element.value;
+                                var allowed_extensions = new Array("pdf");
+                                var file_extension = fileName.split('.').pop();
+                                el.innerHTML = "";
+                                for (var i = 0; i < allowed_extensions.length; i++) {
+                                    if (allowed_extensions[i] == file_extension) {
+                                        valid = true; // valid file extension
+                                        el.innerHTML = "";
+                                        return;
+                                    }
                                 }
-    
+                                el.innerHTML = "<h4>Invalid file! Please upload .pdf file</h4>";
+                                valid = false;
+                            }
+
+                            function valid_form() {
+                                return valid;
                             }
                         </script>
+
                         <div class="input-group" id="pdfUploader">
-                            
+
                         </div>
                         <div class="p-t-15">
                             <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
