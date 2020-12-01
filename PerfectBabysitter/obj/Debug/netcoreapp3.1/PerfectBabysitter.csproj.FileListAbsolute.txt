@@ -2010,3 +2010,9 @@ G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.
 G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.csprojAssemblyReference.cache
 G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_RegisterLayout.cshtml.g.cs
 >>>>>>> e659354cc94e68a06a0c0351567669e9a502f9b6
+C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\bin\Debug\netcoreapp3.1\web.config
+C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Home\404.cshtml.g.cs
+C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Register.cshtml.g.cs
+C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Profile\SignIn.cshtml.g.cs
+C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_RegisterLayout.cshtml.g.cs
+C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SignInLayout.cshtml.g.cs
