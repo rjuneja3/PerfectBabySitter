@@ -1,0 +1,65 @@
+﻿@model IEnumerable<JobPosting>
+
+<div>
+    <div>
+        <h1 style="text-align: center;">PostedJobs</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="max-width: none; max-height: none; width: 1120.33px; height: 532.736px;">
+                <table class="table" style="">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.JobTitle)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.DatePosted)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.JobTitle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DatePosted)
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <form asp-controller="PostJob" method="post">
+                                            <input hidden name="jobTitle" value="@item.JobTitle" />
+                                            <input hidden name="description" value="@item.Description" />
+                                            <input hidden name="datePosted" value="@item.DatePosted"/>
+                                        </form>
+                                        &nbsp;
+                                        <form asp-controller="PostJob" method="post">
+                                            <a href="javascript:void(0);" class="anchorDetail" data-id="@item.Id">Details</a>
+                                        </form>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    }
+                </table>
+                <div id='myModal' class='modal'>
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div id='myModalContent'></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

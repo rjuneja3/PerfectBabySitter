@@ -7,7 +7,7 @@ namespace PerfectBabysitter.Models
 {
     interface IJobPostingsFakeRepository : IJobPostingsRepository
     {
-        public IQueryable<JobPosting> JobPostings => new List<JobPosting>
+        public new IQueryable<JobPosting> JobPostings => new List<JobPosting>
         {
             new JobPosting
                     {
@@ -18,6 +18,7 @@ namespace PerfectBabysitter.Models
                         Children = 2,
                         Language = "ENGLISH",
                         Date = "21/11/2020",
+                        DatePosted = "12/11/2020",
                         EndTime = "11:59",
                         StartTime =  "11:00",
                         Cooking = true,
@@ -35,6 +36,7 @@ namespace PerfectBabysitter.Models
                         Children = 5,
                         Language = "FRENCH",
                         Date = "20/11/2020",
+                        DatePosted = "8/10/2020",
                         EndTime = "09:59",
                         StartTime = "10:00",
                         Cooking = true,

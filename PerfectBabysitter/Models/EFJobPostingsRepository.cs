@@ -24,20 +24,21 @@ namespace PerfectBabysitter.Models
                 }
                 else
                 {
-                    JobPosting jobEntry = context.JobPostings
+                    var jobEntry = context.JobPostings
                         .Single(p => p.Id == jPosting.Id);
                     if (jobEntry != null)
                     {
-                    jobEntry.JobTitle = jPosting.JobTitle;
-                    jobEntry.Address = jPosting.Address;
-                    jobEntry.Children = jPosting.Children;
-                    jobEntry.Date = jPosting.Date;
-                    jobEntry.Description = jPosting.Description;
-                    jobEntry.Email = jPosting.Email;
-                    jobEntry.EndTime = jPosting.EndTime;
-                    jobEntry.Language = jPosting.Language;
-                    jobEntry.PhoneNumber = jPosting.PhoneNumber;
-                    jobEntry.StartTime = jPosting.StartTime;
+                        jobEntry.JobTitle = jPosting.JobTitle;
+                        jobEntry.Address = jPosting.Address;
+                        jobEntry.Children = jPosting.Children;
+                        jobEntry.Date = jPosting.Date;
+                        jobEntry.DatePosted = jPosting.DatePosted;
+                        jobEntry.Description = jPosting.Description;
+                        jobEntry.Email = jPosting.Email;
+                        jobEntry.EndTime = jPosting.EndTime;
+                        jobEntry.Language = jPosting.Language;
+                        jobEntry.PhoneNumber = jPosting.PhoneNumber;
+                        jobEntry.StartTime = jPosting.StartTime;
                     
                     }
                 }
@@ -48,7 +49,7 @@ namespace PerfectBabysitter.Models
         // sql to delete job posting
         public JobPosting DeleteJobPosting(int id)
         {
-                JobPosting jobEntry = context.JobPostings
+                var jobEntry = context.JobPostings
                     .FirstOrDefault(p => p.Id == id);
 
                 if (jobEntry != null)

@@ -3,7 +3,7 @@
 <p>Please follow the below form to upload your job posting.</p>
 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-<form asp-action="JobForm" onsubmit="return validateForm()" method="post">
+<form asp-action="JobForm" onsubmit="var validateForm = function() { throw new Error("Not implemented"); };return validateForm()" method="post">
     <div class="form-group">
         <label for="JobTitle">Job Title:</label>
         @Html.TextBoxFor(model => model.JobTitle, new { @class = "form-control" })
@@ -38,6 +38,12 @@
         <label>Date:</label>
         @Html.TextBoxFor(model => model.Date, new { @class = "form-control", @type = "date" })
         @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="form-group">
+        <label>DatePosting:</label>
+        @Html.TextBoxFor(model => model.DatePosted, new { @class = "form-control", @type = "date" })
+        @Html.ValidationMessageFor(model => model.DatePosted, "", new { @class = "text-danger" })
     </div>
     <br />
     <div class="form-group">
