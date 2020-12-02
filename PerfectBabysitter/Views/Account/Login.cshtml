@@ -1,4 +1,4 @@
-﻿@model Account
+﻿@model SignIn
 
 @{
     ViewData["Title"] = "Sign In Page";
@@ -16,6 +16,7 @@
                 <span class="login100-form-title">
                     User Login
                 </span>
+                @Html.ValidationMessage("message")
                 <div class="input-group">
                     <div class="p-t-10">
                         <div><span asp-validation-for="AccountType" class="text-danger"></span></div>
@@ -42,7 +43,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Password is required">
-                    <input asp-for="Password" class="input100" type="password" name="pass" placeholder="Password">
+                    <input asp-for="Password" class="input100" type="password" name="password" placeholder="Password">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-lock" aria-hidden="true"></i>

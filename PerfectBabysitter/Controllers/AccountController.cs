@@ -26,29 +26,53 @@ namespace PerfectBabysitter.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(Account model)
+        public async Task<ActionResult> Login(SignIn model)
         {
             if (ModelState.IsValid)
             {
                 IdentityUser user = await userManager.FindByEmailAsync(model.Email);
-                if (user != null)
+
+                if (user != null && !user.EmailConfirmed)  
                 {
-                    await signInManager.SignOutAsync();
-                    if ((await signInManager.PasswordSignInAsync(user, model.Password, false, false)).Succeeded)
-                    {
-                        return Redirect(model?.ReturnUrl ?? "/Home/Index");
-                    }
+                    ModelState.AddModelError("message", "Email not confirmed yet");
+                    return View(model);  
                 }
+
+                if (await userManager.CheckPasswordAsync(user, model.Password) == false)  
+                {
+                    ModelState.AddModelError("message", "Invalid credentials");
+                    return View(model);  
+                } 
+
+                var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
+
+                if (result.Succeeded)  
+                {  
+                 //await userManager.AddClaimAsync(user, new Claim("UserRole", "Admin"));  
+                 //return RedirectToAction("Dashboard");
+                    return Redirect(model?.ReturnUrl ?? "/Home/Index");
+                }
+
+                //if (user != null && !user.EmailConfirmed)
+                //{
+                //    await signInManager.SignOutAsync();
+                //    if ((await signInManager.PasswordSignInAsync(user, model.Password, false, false)).Succeeded)
+                //    {
+                //        return Redirect(model?.ReturnUrl ?? "/Home/Index");
+                //    }
+                //}
             }
 
-            ModelState.AddModelError("", "Invalid email or password");
+            ModelState.AddModelError("message", "Invalid email or password");
             return View(model);
         }
 
+        [HttpGet]
         [AllowAnonymous]
         public ViewResult Login(string returnUrl)
         {
-            return View(new Account());
+            SignIn model = new SignIn();
+            return View(model);
         }
 
         [HttpGet]
@@ -65,13 +89,13 @@ namespace PerfectBabysitter.Controllers
         {
             if (ModelState.IsValid)
             {
-                IdentityUser userCheck = await userManager.FindByNameAsync(model.FirstName);
+                IdentityUser userCheck = await userManager.FindByEmailAsync(model.Email);
 
                 if (userCheck == null)  
                 {  
                    var user = new IdentityUser  
                    {  
-                       UserName = model.FirstName,  
+                       UserName = model.Email,  
                        NormalizedUserName = model.Email,  
                        Email = model.Email,  
                        PhoneNumber = model.PhoneNumber,  
@@ -106,5 +130,11 @@ namespace PerfectBabysitter.Controllers
             }  
             return View(model);
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();  
+            return RedirectToAction("Login", "Account");  
+        } 
     }
 }

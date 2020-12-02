@@ -11,6 +11,7 @@
             <div class="card-body">
                 <h2 class="title">Registration Form</h2> 
                 <form asp-action="Register" asp-controller="Account" method="POST">
+                    @Html.ValidationMessage("message")
                     <div class="row row-space">
                         <div class="col-2">
                             <div class="input-group">
@@ -88,15 +89,15 @@
                     <div class="input-group">
                         <label class="label">Account type</label>
                         <div><span asp-validation-for="AccountType" class="text-danger"></span></div>
-                    <div class="rs-select2 js-select-simple select--no-search">
-                        @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(AccountType))), "Choose Option", new { @class = "form-control" })
-                        @*<select name="subject" onchange="addCode();" id="accountType">
-                            <option disabled="disabled" selected="selected">Choose option</option>
-                            <option value="babysitterOptn">Babysitter</option>
-                            <option value="parentOptn">Parent</option>
-                        </select>*@
-                        <div class="select-dropdown"></div>
-                    </div>
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(AccountType))), "Choose Option", new { @class = "form-control" })
+                            @*<select name="subject" onchange="addCode();" id="accountType">
+                    <option disabled="disabled" selected="selected">Choose option</option>
+                    <option value="babysitterOptn">Babysitter</option>
+                    <option value="parentOptn">Parent</option>
+                </select>*@
+                            <div class="select-dropdown"></div>
+                        </div>
                     </div>
 
                     <script>

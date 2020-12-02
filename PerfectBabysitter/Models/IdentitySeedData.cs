@@ -10,7 +10,7 @@ namespace PerfectBabysitter.Models
 {
     public static class IdentitySeedData
     {
-        private const string adminUser = "Admin";
+        private const string adminUser = "Admin@me.com";
         private const string adminPassword = "Anon098$";
 
         public static async void EnsurePopulated(IApplicationBuilder app)
