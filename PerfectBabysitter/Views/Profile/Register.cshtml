@@ -1,115 +1,131 @@
-﻿
+﻿@model Account
+
 @{
     ViewData["Title"] = "Register";
      Layout = "_RegisterLayout";
 }
 
-    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-        <div class="wrapper wrapper--w780">
-            <div class="card card-4">
-                <div class="card-body">
-                    <h2 class="title">Registration Form</h2>
-                    <form method="POST">
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
-                                </div>
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w780">
+        <div class="card card-4">
+            <div class="card-body">
+                <h2 class="title">Registration Form</h2> 
+                <form asp-action="Register" asp-controller="Profile" method="POST">
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">first name</label>
+                                <div><span asp-validation-for="FirstName" class="text-danger"></span></div>
+                                <input asp-for="FirstName" class="input--style-4" type="text" name="first_name">
                             </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">last name</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">last name</label>
+                                <div><span asp-validation-for="LastName" class="text-danger"></span></div>
+                                <input asp-for="LastName" class="input--style-4" type="text" name="last_name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Birthday</label>
+                                <div><span asp-validation-for="Birthday" class="text-danger"></span></div>
+                                <div class="input-group-icon">
+                                    <input asp-for="Birthday" class="input--style-4 js-datepicker" type="text" name="birthday">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Birthday</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Gender</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">
-                                            Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">
-                                            Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Gender</label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">
+                                        Male
+                                        @*<input type="radio" checked="checked" name="gender">*@
+                                        @Html.RadioButtonFor(model => model.Gender, "Male")
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        Female
+                                        @*<input type="radio" name="gender">*@
+                                        @Html.RadioButtonFor(model => model.Gender, "Female")
+                                        <span class="checkmark"></span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone">
-                                </div>
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Email</label>
+                                <div><span asp-validation-for="Email" class="text-danger"></span></div>
+                                <input asp-for="Email" class="input--style-4" type="email" name="email">
                             </div>
                         </div>
-                        <div class="input-group">
-                            <label class="label">Account type</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject" onchange="addCode();" id="accountType">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option value="babysitterOptn">Babysitter</option>
-                                    <option value="parentOptn">Parent</option>
-                                </select>
-                                <div class="select-dropdown"></div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Password</label>
+                                <div><span asp-validation-for="Password" class="text-danger"></span></div>
+                                <input asp-for="Password" class="input--style-4" type="password" name="password">
                             </div>
                         </div>
-                        <script>
-                            var valid = false;
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-1">
+                            <div class="input-group">
+                                <label class="label">Phone</label>
+                                <div><span asp-validation-for="PhoneNumber" class="text-danger"></span></div>
+                                <input asp-for="PhoneNumber" class="input--style-4" type="text" name="phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label class="label">Account type</label>
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="subject" onchange="addCode();" id="accountType">
+                                <option disabled="disabled" selected="selected">Choose option</option>
+                                <option value="babysitterOptn">Babysitter</option>
+                                <option value="parentOptn">Parent</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
 
-                            function validate_fileupload(input_element) {
-                                var el = document.getElementById("error");
-                                var fileName = input_element.value;
-                                var allowed_extensions = new Array("pdf");
-                                var file_extension = fileName.split('.').pop();
-                                el.innerHTML = "";
-                                for (var i = 0; i < allowed_extensions.length; i++) {
-                                    if (allowed_extensions[i] == file_extension) {
-                                        valid = true; // valid file extension
-                                        el.innerHTML = "";
-                                        return;
-                                    }
+                    <script>
+                        var valid = false;
+
+                        function validate_fileupload(input_element) {
+                            var el = document.getElementById("error");
+                            var fileName = input_element.value;
+                            var allowed_extensions = new Array("pdf");
+                            var file_extension = fileName.split('.').pop();
+                            el.innerHTML = "";
+                            for (var i = 0; i < allowed_extensions.length; i++) {
+                                if (allowed_extensions[i] == file_extension) {
+                                    valid = true; // valid file extension
+                                    el.innerHTML = "";
+                                    return;
                                 }
-                                el.innerHTML = "<h4>Invalid file! Please upload .pdf file</h4>";
-                                valid = false;
                             }
+                            el.innerHTML = "<h4>Invalid file! Please upload .pdf file</h4>";
+                            valid = false;
+                        }
 
-                            function valid_form() {
-                                return valid;
-                            }
-                        </script>
+                        function valid_form() {
+                            return valid;
+                        }
+                    </script>
 
-                        <div class="input-group" id="pdfUploader">
-
-                        </div>
-                        <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="input-group" id="pdfUploader"></div>
+                    <div class="p-t-15">
+                        <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>

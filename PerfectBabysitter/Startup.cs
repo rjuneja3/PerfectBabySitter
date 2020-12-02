@@ -15,7 +15,6 @@ using Microsoft.Extensions.Hosting;
 
 namespace PerfectBabysitter
 {
-    
     public class Startup
     {
         public IConfiguration Configuration { get; }
@@ -25,6 +24,10 @@ namespace PerfectBabysitter
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:PerfectBabySitter:ConnectionString"]));
+            services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["Data:PerfectBabySitterIdentity:ConnectionString"]));
+            
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>().AddDefaultTokenProviders();
+
             services.AddTransient<IJobPostingsRepository, EFJobPostingsRepository>();
             services.AddTransient<IAppliedJobRepository, EFAppliedJobRepository>();
             services.AddMvc();
@@ -40,18 +43,20 @@ namespace PerfectBabysitter
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
             app.UseRouting();
             app.UseCors();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
             });
 
-            
-            app.UseStaticFiles();
-           
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }
