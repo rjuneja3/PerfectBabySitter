@@ -73,7 +73,7 @@ namespace PerfectBabysitter.Models
 
         public JobPosting Update(JobPosting jPosting)
         {
-            if (jPosting.Id >= 1)
+            if(context.JobPostings.Find(jPosting.Id) == null)
             {
                 context.JobPostings.Update(jPosting);
             }

@@ -46,7 +46,7 @@
                                             <input hidden name="datePosted" value="@item.DatePosted" />
                                         </form>
                                         <form>
-                                            <a asp-controller="PostJob" asp-action="ViewJobs" method="post"class="btn btn-primary m-1" data-id="@item.Description">Details</a>
+                                            <a asp-controller="Search" asp-action="JobDetails" asp-route-jobId="@item.Id" method="post"class="btn btn-primary m-1" data-id="@item.Description">Details</a>
                                         </form>
                                         
                                         <form>

@@ -9,6 +9,10 @@
             <div class="row">
                 <div class="col-sm-12" style="max-width: none; max-height: none; width: 1120.33px; height: 532.736px;">
                     <form asp-action="Edit" onsubmit="var validateForm = function() { throw new Error(" Not implemented"); };return validateForm()" method="post">
+                        <div style="display: none">
+                            @Html.TextBoxFor(model => model.Id, new { @class = "form-control" })
+                        </div>
+                        
                         <div class="form-group">
                             <label for="JobTitle">Job Title:</label>
                             @Html.TextBoxFor(model => model.JobTitle, new { @class = "form-control" })
@@ -41,13 +45,13 @@
                         <br />
                         <div class="form-group">
                             <label>Date:</label>
-                            @Html.TextBoxFor(model => model.Date, new { @class = "form-control", @type = "date" })
+                            @Html.TextBoxFor(model => model.Date, new { @class = "form-control", @type = "date", value = @Model.Date })
                             @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
                         </div>
                         <br />
                         <div class="form-group">
                             <label>DatePosting:</label>
-                            @Html.TextBoxFor(model => model.DatePosted, new { @class = "form-control", @type = "date" })
+                            @Html.TextBoxFor(model => model.DatePosted, new { @class = "form-control", @type = "date", value = @Model.DatePosted})
                             @Html.ValidationMessageFor(model => model.DatePosted, "", new { @class = "text-danger" })
                         </div>
                         <br />
@@ -109,9 +113,10 @@
                 </div>
             </div>
         </div>
-    </div>        
+</div>       
+<br />
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{await Html.RenderPartialAsync($"_ValidationScriptsPartial");}
 }
