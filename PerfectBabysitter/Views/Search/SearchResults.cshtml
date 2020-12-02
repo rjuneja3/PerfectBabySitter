@@ -48,7 +48,8 @@
         @if (Model.JobPostings.Any())
         {
             @foreach (var r in Model.JobPostings)
-            {@Html.Partial("JobSummary", r)} }
+            {@Html.Partial($"JobSummary", r)
+            } }
          else
          {
             <h4>Sorry</h4>
