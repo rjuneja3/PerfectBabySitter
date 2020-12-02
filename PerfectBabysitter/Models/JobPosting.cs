@@ -49,8 +49,10 @@ namespace PerfectBabysitter.Models
 
         public bool Cleaning{get;set;}
 
+        [Required(ErrorMessage = "Please specify the activities")]
         public string Activities{get;set;}
 
+        [Required(ErrorMessage = "Please enter your description of the job")]
         public string Description{get;set;}
         
     }

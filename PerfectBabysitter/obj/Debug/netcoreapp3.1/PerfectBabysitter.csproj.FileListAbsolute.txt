@@ -2184,3 +2184,6 @@ G:\PERFECT\New folder\New folder (2)\PerfectBabysitter\PerfectBabysitter\obj\Deb
 G:\PERFECT\New folder\New folder (2)\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.csproj.CopyComplete
 G:\PERFECT\New folder\New folder (2)\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.dll
 G:\PERFECT\New folder\New folder (2)\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\PerfectBabysitter.pdb
+C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\Edit.cshtml.g.cs
+C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\CompletedEdit.cshtml.g.cs
