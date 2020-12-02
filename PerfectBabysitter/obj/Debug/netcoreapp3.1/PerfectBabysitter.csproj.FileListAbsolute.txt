@@ -2187,3 +2187,7 @@ G:\PERFECT\New folder\New folder (2)\PerfectBabysitter\PerfectBabysitter\obj\Deb
 C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\Edit.cshtml.g.cs
 C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Owner\Desktop\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\CompletedEdit.cshtml.g.cs
+G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\CompletedEdit.cshtml.g.cs
+G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\Edit.cshtml.g.cs
+G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\PostedJobs.cshtml.g.cs
+G:\PERFECT\New folder\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
