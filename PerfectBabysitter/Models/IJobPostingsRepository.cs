@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace PerfectBabysitter.Models
 {
@@ -11,5 +12,7 @@ namespace PerfectBabysitter.Models
 
         void AddPosting(JobPosting jPosting);
         JobPosting DeleteJobPosting(int id);
+        JobPosting GetJobPosting(int id);
+        JobPosting Update(JobPosting jPosting);
     }
 }
