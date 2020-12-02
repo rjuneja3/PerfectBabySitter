@@ -12,13 +12,13 @@
                 <img src="~/img/img-01.png" alt="IMG">
             </div>
 
-            <form asp-action="SignIn" asp-controller="Profile" class="login100-form validate-form">
+            <form asp-action="Login" asp-controller="Account" method="POST" class="login100-form validate-form">
                 <span class="login100-form-title">
                     User Login
                 </span>
                 <div class="input-group">
-                    
                     <div class="p-t-10">
+                        <div><span asp-validation-for="AccountType" class="text-danger"></span></div>
                         <label class="radio-container m-r-3">
                             Parent
                             @*<input type="radio" checked="checked" name="accountType">*@
@@ -57,7 +57,7 @@
 
 
                 <div class="text-center p-t-136">
-                    @Html.ActionLink("Don't have an account? Sign up!", "Register", "Profile", null, new { @class = "text2" })
+                    @Html.ActionLink("Don't have an account? Sign up!", "Register", "Account", null, new { @class = "text2" })
                     <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>
                 </div>

@@ -146,8 +146,6 @@ C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Deb
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\JobForm.cshtml.g.cs
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\PostedJobs.cshtml.g.cs
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\PostJob\ViewJobs.cshtml.g.cs
-C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Register.cshtml.g.cs
-C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Profile\SignIn.cshtml.g.cs
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Search\JobDetails.cshtml.g.cs
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Search\SearchResults.cshtml.g.cs
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\JobSummary.cshtml.g.cs
@@ -168,3 +166,5 @@ C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\bin\Deb
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Geerththan\Documents\GitHUB\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs

@@ -10,20 +10,20 @@
         <div class="card card-4">
             <div class="card-body">
                 <h2 class="title">Registration Form</h2> 
-                <form asp-action="Register" asp-controller="Profile" method="POST">
+                <form asp-action="Register" asp-controller="Account" method="POST">
                     <div class="row row-space">
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">first name</label>
                                 <div><span asp-validation-for="FirstName" class="text-danger"></span></div>
-                                <input asp-for="FirstName" class="input--style-4" type="text" name="first_name">
+                                <input asp-for="FirstName" class="input--style-4" type="text" name="firstName">
                             </div>
                         </div>
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">last name</label>
                                 <div><span asp-validation-for="LastName" class="text-danger"></span></div>
-                                <input asp-for="LastName" class="input--style-4" type="text" name="last_name">
+                                <input asp-for="LastName" class="input--style-4" type="text" name="lastName">
                             </div>
                         </div>
                     </div>
@@ -42,6 +42,8 @@
                             <div class="input-group">
                                 <label class="label">Gender</label>
                                 <div class="p-t-10">
+                                    @*<div><span asp-validation-for="Gender" class="text-danger"></span></div>*@
+                                    <div>@Html.ValidationMessageFor(model => model.Gender)</div>
                                     <label class="radio-container m-r-45">
                                         Male
                                         @*<input type="radio" checked="checked" name="gender">*@
@@ -79,20 +81,22 @@
                             <div class="input-group">
                                 <label class="label">Phone</label>
                                 <div><span asp-validation-for="PhoneNumber" class="text-danger"></span></div>
-                                <input asp-for="PhoneNumber" class="input--style-4" type="text" name="phone">
+                                <input asp-for="PhoneNumber" class="input--style-4" type="text" name="phoneNumber">
                             </div>
                         </div>
                     </div>
                     <div class="input-group">
                         <label class="label">Account type</label>
-                        <div class="rs-select2 js-select-simple select--no-search">
-                            <select name="subject" onchange="addCode();" id="accountType">
-                                <option disabled="disabled" selected="selected">Choose option</option>
-                                <option value="babysitterOptn">Babysitter</option>
-                                <option value="parentOptn">Parent</option>
-                            </select>
-                            <div class="select-dropdown"></div>
-                        </div>
+                        <div><span asp-validation-for="AccountType" class="text-danger"></span></div>
+                    <div class="rs-select2 js-select-simple select--no-search">
+                        @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(AccountType))), "Choose Option", new { @class = "form-control" })
+                        @*<select name="subject" onchange="addCode();" id="accountType">
+                            <option disabled="disabled" selected="selected">Choose option</option>
+                            <option value="babysitterOptn">Babysitter</option>
+                            <option value="parentOptn">Parent</option>
+                        </select>*@
+                        <div class="select-dropdown"></div>
+                    </div>
                     </div>
 
                     <script>
