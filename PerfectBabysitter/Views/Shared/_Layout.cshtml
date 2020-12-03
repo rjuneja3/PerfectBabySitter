@@ -2,6 +2,11 @@
 {
     RenderSection("scripts");
 }
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +61,24 @@
                         </li>
                     </ul>
                 </div>
-            </nav>@Html.ActionLink("Sign In", "SignIn", "Profile", null, new { @class = "btn btn-primary" })
+            </nav>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                @*@if (User.IsInRole("BabySitter"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" title="Wow">This works</a>
+                    </li>
+                }*@
+                <li class="nav-item">
+                    <a class="nav-link text-dark" title="Manage">Hello @User.Identity.Name!</a>
+                </li>
+                @Html.ActionLink("Log Out", "Logout", "Account", null, new { @class = "btn btn-primary" })
+            }
+            else
+            {
+                @Html.ActionLink("Sign In", "Login", "Account", null, new { @class = "btn btn-primary" })
+            }
         </div>
     </nav>
     <div>

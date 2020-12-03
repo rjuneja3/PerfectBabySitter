@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
+    "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
   },
   "projects": {
-    "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
+    "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "projectUniqueName": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
         "projectName": "PerfectBabysitter",
-        "projectPath": "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
-        "packagesPath": "C:\\Users\\Rohan\\.nuget\\packages\\",
-        "outputPath": "G:\\PERFECT\\New folder\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
+        "projectPath": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "packagesPath": "C:\\Users\\Geerththan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Geerththan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,7 +41,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -84,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
