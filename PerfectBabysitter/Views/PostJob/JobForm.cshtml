@@ -1,101 +1,129 @@
 ﻿@model PerfectBabysitter.Models.JobPosting
+    <div class="container" class="text-center bg-light">
+        <h1 style="text-align: center;">Post a Job</h1>
+        <div class="row">
+            <div class="col-sm-12" style="max-width: none; max-height: none; width: 1120.33px;  ">
+                <p>Please follow the below form to upload your job posting.</p>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-<p>Please follow the below form to upload your job posting.</p>
-@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <form asp-action="JobForm" onsubmit="var validateForm = function() { throw new Error(" Not implemented"); };return validateForm()" method="post">
+                    <div class="form-group">
+                        <label for="JobTitle">Job Title:</label>
+                        @Html.TextBoxFor(model => model.JobTitle, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.JobTitle, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="PhoneNumber">Phone Number:</label>
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Address:</label>
+                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Email:</label>
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Number of Children:</label>
+                        @Html.TextBoxFor(model => model.Children, new { @class = "form-control", @type = "number", @min = "1" })
+                        @Html.ValidationMessageFor(model => model.Children, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Date:</label>
+                        @Html.TextBoxFor(model => model.Date, new { @class = "form-control", @type = "date" })
+                        @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>DatePosting:</label>
+                        @Html.TextBoxFor(model => model.DatePosted, new { @class = "form-control", @type = "date" })
+                        @Html.ValidationMessageFor(model => model.DatePosted, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Starting Time: (please specify AM or PM)</label>
+                        @Html.TextBoxFor(model => model.StartTime, new { @class = "form-control", @type = "time" })
+                        @Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Ending Time: (please specify AM or PM)</label>
+                        @Html.TextBoxFor(model => model.EndTime, new { @class = "form-control", @type = "time" })
+                        @Html.ValidationMessageFor(model => model.EndTime, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Preferred Language:</label>
+                        @Html.TextBoxFor(model => model.Language, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Language, "", new { @class = "text-danger" })
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Housekeeping Duties (Optional)</label>
+                        <div>
+                            
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label>Cooking</label>
+                                        </td>
+                                        <td width="20%">
+                                            @Html.CheckBoxFor(model => model.Cooking, new { @class = "form-control" })
+                                        </td>
+                                    </tr>
 
-<form asp-action="JobForm" onsubmit="var validateForm = function() { throw new Error("Not implemented"); };return validateForm()" method="post">
-    <div class="form-group">
-        <label for="JobTitle">Job Title:</label>
-        @Html.TextBoxFor(model => model.JobTitle, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.JobTitle, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label for="PhoneNumber">Phone Number:</label>
-        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label class="col-md-2 control-label">Address:</label>
-        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label class="col-md-2 control-label">Email:</label>
-        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label>Number of Children:</label>
-        @Html.TextBoxFor(model => model.Children, new { @class = "form-control", @type = "number", @min = "1" })
-        @Html.ValidationMessageFor(model => model.Children, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label>Date:</label>
-        @Html.TextBoxFor(model => model.Date, new { @class = "form-control", @type = "date" })
-        @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label>DatePosting:</label>
-        @Html.TextBoxFor(model => model.DatePosted, new { @class = "form-control", @type = "date" })
-        @Html.ValidationMessageFor(model => model.DatePosted, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label>Starting Time: (please specify AM or PM)</label>
-        @Html.TextBoxFor(model => model.StartTime, new { @class = "form-control", @type = "time" })
-        @Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label>Ending Time: (please specify AM or PM)</label>
-        @Html.TextBoxFor(model => model.EndTime, new { @class = "form-control", @type = "time" })
-        @Html.ValidationMessageFor(model => model.EndTime, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label>Preferred Language:</label>
-        @Html.TextBoxFor(model => model.Language, new { @class = "form-control" })
-        @Html.ValidationMessageFor(model => model.Language, "", new { @class = "text-danger" })
-    </div>
-    <br />
-    <div class="form-group">
-        <label>Housekeeping Duties (Optional)</label>
-        <div>
-            @Html.CheckBoxFor(model => model.Cooking, new { @class = "form-control" })
-            <label>Cooking</label>
-            <br />
-            @Html.CheckBoxFor(model => model.Cleaning, new { @class = "form-control" })
-            <label>Cleaning</label>
+                                    <tr>
+                                        <td>
+                                            <label>Cleaning</label>
+                                        </td>
+                                        <td width="20%">
+                                            @Html.CheckBoxFor(model => model.Cleaning, new { @class = "form-control" })
+                                        </td>
+                                    </tr>
+                           
+                            </table>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Day to Day Activities (Optional)</label>
+                        <div>
+                            @Html.TextBoxFor(model => model.Activities, new { @class = "form-control", style = "width:200px" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label>Other Details (Optional)</label>
+                        <div>
+                            @Html.TextAreaFor(model => model.Description, new
+                            {
+                                @class = "form-control",
+                                rows = "10",
+                                cols = "80",
+                           style = "resize: none;"
+                            })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="text-center">
+                        <input class="btn btn-primary" type="submit" value="Save Job Info" />
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    <br />
-    <div class="form-group">
-        <label>Day to Day Activities (Optional)</label>
-        <div>
-            @Html.TextBoxFor(model => model.Activities, new { @class = "form-control", style = "width:200px" })
-        </div>
-    </div>
-    <br />
-    <div class="form-group">
-        <label>Other Details (Optional)</label>
-        <div>
-            @Html.TextAreaFor(model => model.Description, new
-            {
-                @class = "form-control",
-                rows = "10",
-                cols = "80",
-           style = "resize: none;"
-            })
-        </div>
-    </div>
-    <br />
-    <div class="text-center">
-        <input class="btn btn-primary" type="submit" value="Post Job" />
-    </div>
-</form>
