@@ -30,6 +30,7 @@ namespace PerfectBabysitter
 
             services.AddTransient<IJobPostingsRepository, EFJobPostingsRepository>();
             services.AddTransient<IAppliedJobRepository, EFAppliedJobRepository>();
+            services.AddTransient<IAccountRepository, EFAccountRepository>();
             services.AddMvc();
            
         }

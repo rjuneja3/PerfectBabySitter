@@ -16,11 +16,13 @@ namespace PerfectBabysitter.Controllers
     {
         private UserManager<IdentityUser> userManager;
         private SignInManager<IdentityUser> signInManager;
+        private IAccountRepository repository;
 
-        public AccountController(UserManager<IdentityUser> userMgr, SignInManager<IdentityUser> signInMgr)
+        public AccountController(UserManager<IdentityUser> userMgr, SignInManager<IdentityUser> signInMgr, IAccountRepository repo)
         {
             userManager = userMgr;
             signInManager = signInMgr;
+            repository = repo;
         }
 
         [HttpPost]
@@ -52,15 +54,6 @@ namespace PerfectBabysitter.Controllers
                  //return RedirectToAction("Dashboard");
                     return Redirect(model?.ReturnUrl ?? "/Home/Index");
                 }
-
-                //if (user != null && !user.EmailConfirmed)
-                //{
-                //    await signInManager.SignOutAsync();
-                //    if ((await signInManager.PasswordSignInAsync(user, model.Password, false, false)).Succeeded)
-                //    {
-                //        return Redirect(model?.ReturnUrl ?? "/Home/Index");
-                //    }
-                //}
             }
 
             ModelState.AddModelError("message", "Invalid email or password");
@@ -105,8 +98,9 @@ namespace PerfectBabysitter.Controllers
                    var result = await userManager.CreateAsync(user, model.Password);  
 
                    if (result.Succeeded)  
-                   {  
-                       return RedirectToAction("Login");  
+                   {
+                        repository.AddAccount(model);
+                        return RedirectToAction("Login");  
                    }  
 
                    else  
