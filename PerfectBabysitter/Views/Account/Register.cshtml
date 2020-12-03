@@ -43,17 +43,14 @@
                             <div class="input-group">
                                 <label class="label">Gender</label>
                                 <div class="p-t-10">
-                                    @*<div><span asp-validation-for="Gender" class="text-danger"></span></div>*@
                                     <div>@Html.ValidationMessageFor(model => model.Gender)</div>
                                     <label class="radio-container m-r-45">
                                         Male
-                                        @*<input type="radio" checked="checked" name="gender">*@
                                         @Html.RadioButtonFor(model => model.Gender, "Male")
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">
                                         Female
-                                        @*<input type="radio" name="gender">*@
                                         @Html.RadioButtonFor(model => model.Gender, "Female")
                                         <span class="checkmark"></span>
                                     </label>
@@ -91,11 +88,6 @@
                         <div><span asp-validation-for="AccountType" class="text-danger"></span></div>
                         <div class="rs-select2 js-select-simple select--no-search">
                             @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(AccountType))), "Choose Option", new { @class = "form-control", @onchange="addCode();", @id="accountType" })
-                            @*<select name="subject" onchange="addCode();" id="accountType">
-                    <option disabled="disabled" selected="selected">Choose option</option>
-                    <option value="babysitterOptn">Babysitter</option>
-                    <option value="parentOptn">Parent</option>
-                </select>*@
                             <div class="select-dropdown"></div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using PerfectBabysitter.Models;
+using System.Security.Claims;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -49,8 +50,9 @@ namespace PerfectBabysitter.Controllers
                 var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
 
                 if (result.Succeeded)  
-                {  
-                 //await userManager.AddClaimAsync(user, new Claim("UserRole", "Admin"));  
+                {
+                    string role = model.AccountType;
+                    await userManager.AddClaimAsync(user, new Claim(ClaimTypes.Role, role));  
                  //return RedirectToAction("Dashboard");
                     return Redirect(model?.ReturnUrl ?? "/Home/Index");
                 }

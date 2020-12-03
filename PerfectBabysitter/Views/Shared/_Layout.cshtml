@@ -64,13 +64,16 @@
             </nav>
             @if (SignInManager.IsSignedIn(User))
             {
+                @*@if (User.IsInRole("BabySitter"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" title="Wow">This works</a>
+                    </li>
+                }*@
                 <li class="nav-item">
                     <a class="nav-link text-dark" title="Manage">Hello @User.Identity.Name!</a>
                 </li>
                 @Html.ActionLink("Log Out", "Logout", "Account", null, new { @class = "btn btn-primary" })
-                @*<li class="nav-item">
-                    <a class="nav-link btn btn-link text-dark" asp-controller="Account" asp-action="Logout">Logout</a>
-                </li>*@
             }
             else
             {
