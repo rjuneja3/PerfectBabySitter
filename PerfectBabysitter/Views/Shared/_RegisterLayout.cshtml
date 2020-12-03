@@ -66,11 +66,11 @@
         function addCode() {
             var s = document.getElementById('accountType');
             var accountType = s.options[s.selectedIndex].value;
-            if (accountType == "babysitterOptn") {
+            if (accountType == "Babysitter") {
                 let fragment = createElement(htmlCode)
                 document.getElementById('pdfUploader').appendChild(fragment);
             }
-            else if (accountType == "parentOptn") {
+            else if (accountType == "Parent") {
 
                 var removeUploader = document.getElementById("fileUploader");
                 removeUploader.remove();

@@ -90,7 +90,7 @@
                         <label class="label">Account type</label>
                         <div><span asp-validation-for="AccountType" class="text-danger"></span></div>
                         <div class="rs-select2 js-select-simple select--no-search">
-                            @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(AccountType))), "Choose Option", new { @class = "form-control" })
+                            @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(AccountType))), "Choose Option", new { @class = "form-control", @onchange="addCode();", @id="accountType" })
                             @*<select name="subject" onchange="addCode();" id="accountType">
                     <option disabled="disabled" selected="selected">Choose option</option>
                     <option value="babysitterOptn">Babysitter</option>
