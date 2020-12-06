@@ -1,5 +1,8 @@
 ﻿@model IEnumerable<AppliedJob>
-
+@{
+    ViewData["Title"] = "Applicant";
+    Layout = "_ParentLayout";
+}
 
 <div>
     <div>
@@ -23,7 +26,7 @@
                         <tr>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Id)
-                               
+
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.ApplicantName)

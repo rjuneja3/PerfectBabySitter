@@ -1,4 +1,8 @@
 ﻿@model IEnumerable<JobPosting>
+@{
+    ViewData["Title"] = "Applicant";
+    Layout = "_ParentLayout";
+}
 
 <div>
     <div>
@@ -27,7 +31,7 @@
                     @foreach (var item in Model)
                     {
                         <tr>
-                             <td>
+                            <td>
                                 @Html.DisplayFor(modelItem => item.Id)
                             </td>
                             <td>
@@ -49,11 +53,11 @@
                                             <input hidden name="datePosted" value="@item.DatePosted" />
                                         </form>
                                         <form>
-                                            <a asp-controller="Search" asp-action="JobDetails" asp-route-jobId="@item.Id" method="post"class="btn btn-primary m-1" data-id="@item.Description">Details</a>
+                                            <a asp-controller="Search" asp-action="JobDetails" asp-route-jobId="@item.Id" method="post" class="btn btn-primary m-1" data-id="@item.Description">Details</a>
                                         </form>
-                                        
+
                                         <form>
-                                            <a asp-controller="PostJob" asp-action="Edit" asp-route-id="@item.Id"class="btn btn-primary m-1">Edit</a>
+                                            <a asp-controller="PostJob" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary m-1">Edit</a>
                                         </form>
                                     </tr>
                                 </table>

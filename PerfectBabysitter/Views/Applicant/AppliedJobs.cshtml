@@ -1,4 +1,8 @@
 ﻿@model IEnumerable<AppliedJob>
+@{
+    ViewData["Title"] = "Applied Jobs";
+    Layout = "_BabysitterLayout";
+}
 <div>
     <div>
         <h1 style="text-align: center;">Applied Jobs </h1>
@@ -24,30 +28,30 @@
                     {
                         @if (item.AppliedStatus == "Applied")
                         {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.JobId)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.AppliedStatus)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Status)
-                            </td>
-                            <td>
-                                <table>
-                                    <tr>
-                                        <form asp-action="AppliedJobs" asp-controller="Applicant" method="post">
-                                            <input hidden name="jobId" value="@item.Id" />
-                                            <input hidden name="status" value="Cancled" />
-                                            <button class="btn btn-primary" style="padding: 8px; box-shadow: rgba(38, 143, 255, 0.42) 1px 0px 0px 3px; text-shadow: none; border-width: 1px;">Cancel</button>
-                                        </form>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                            }
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.JobId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.AppliedStatus)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Status)
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <form asp-action="AppliedJobs" asp-controller="Applicant" method="post">
+                                                <input hidden name="jobId" value="@item.Id" />
+                                                <input hidden name="status" value="Cancled" />
+                                                <button class="btn btn-primary" style="padding: 8px; box-shadow: rgba(38, 143, 255, 0.42) 1px 0px 0px 3px; text-shadow: none; border-width: 1px;">Cancel</button>
+                                            </form>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
                         }
+                    }
                 </table>
             </div>
         </div>

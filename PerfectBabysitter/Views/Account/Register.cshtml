@@ -2,14 +2,14 @@
 
 @{
     ViewData["Title"] = "Register";
-     Layout = "_RegisterLayout";
+    Layout = "_RegisterLayout";
 }
 
 <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
     <div class="wrapper wrapper--w780">
         <div class="card card-4">
             <div class="card-body">
-                <h2 class="title">Registration Form</h2> 
+                <h2 class="title">Registration Form</h2>
                 <form asp-action="Register" asp-controller="Account" method="POST">
                     @Html.ValidationMessage("message")
                     <div class="row row-space">
@@ -87,7 +87,7 @@
                         <label class="label">Account type</label>
                         <div><span asp-validation-for="AccountType" class="text-danger"></span></div>
                         <div class="rs-select2 js-select-simple select--no-search">
-                            @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(AccountType))), "Choose Option", new { @class = "form-control", @onchange="addCode();", @id="accountType" })
+                            @Html.DropDownListFor(model => model.AccountType, new SelectList(Enum.GetValues(typeof(AccountType))), "Choose Option", new { @class = "form-control", @onchange = "addCode();", @id = "accountType" })
                             <div class="select-dropdown"></div>
                         </div>
                     </div>

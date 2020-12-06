@@ -347,3 +347,5 @@ G:\PERFECT\New folder\Test\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcore
 G:\PERFECT\New folder\Test\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Home\ContactUs.cshtml.g.cs
 G:\PERFECT\New folder\Test\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
 G:\PERFECT\New folder\Test\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Home\PrivacyPolicy.cshtml.g.cs
+G:\PERFECT\New folder\Test\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BabysitterLayout.cshtml.g.cs
+G:\PERFECT\New folder\Test\PerfectBabysitter\PerfectBabysitter\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ParentLayout.cshtml.g.cs
