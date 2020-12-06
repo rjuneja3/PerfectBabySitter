@@ -101,6 +101,7 @@ namespace PerfectBabysitter.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Activities")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Address")
@@ -125,6 +126,7 @@ namespace PerfectBabysitter.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")

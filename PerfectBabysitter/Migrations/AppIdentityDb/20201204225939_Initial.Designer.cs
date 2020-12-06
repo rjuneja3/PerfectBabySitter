@@ -10,8 +10,8 @@ using PerfectBabysitter.Models;
 namespace PerfectBabysitter.Migrations.AppIdentityDb
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    [Migration("20201202015404_Identity")]
-    partial class Identity
+    [Migration("20201204225939_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

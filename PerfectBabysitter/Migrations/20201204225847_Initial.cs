@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PerfectBabysitter.Migrations
 {
@@ -6,6 +7,28 @@ namespace PerfectBabysitter.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Accounts",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Birthday = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AccountType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Resume = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    ReturnUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Accounts", x => x.ID);
+                });
+
             migrationBuilder.CreateTable(
                 name: "AppliedJobs",
                 columns: table => new
@@ -40,8 +63,8 @@ namespace PerfectBabysitter.Migrations
                     Language = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Cooking = table.Column<bool>(type: "bit", nullable: false),
                     Cleaning = table.Column<bool>(type: "bit", nullable: false),
-                    Activities = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Activities = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -51,6 +74,9 @@ namespace PerfectBabysitter.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Accounts");
+
             migrationBuilder.DropTable(
                 name: "AppliedJobs");
 
