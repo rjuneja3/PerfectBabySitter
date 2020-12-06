@@ -10,7 +10,6 @@ namespace PerfectBabysitter.Models
 {
     public class SeedData
     {
-
         public static void EnsurePopulated(IApplicationBuilder app)
         {
 
@@ -81,6 +80,35 @@ namespace PerfectBabysitter.Models
                         AppliedStatus="Applied"
                     }
                     );
+            }
+
+            if (!context.Accounts.Any())
+            {
+                context.Accounts.AddRange(
+                    new Account
+                    {
+                        //ID = 1,
+                        FirstName = "Alpha",
+                        LastName = "Bet",
+                        Password = "1Ab*bA1",
+                        Birthday = "10/10/2000",
+                        Gender = "Male",
+                        Email = "nume@ric.com",
+                        PhoneNumber = "0123456789",
+                        AccountType = "Parent"
+                    },
+                    new Account
+                    {
+                        //ID = 2,
+                        FirstName = "Try",
+                        LastName = "Me",
+                        Password = "50ToPass*",
+                        Birthday = "12/12/2020",
+                        Gender = "Female",
+                        Email = "try@me.com",
+                        PhoneNumber = "1234567890",
+                        AccountType = "Parent"
+                    });
             }
 
             context.SaveChanges();

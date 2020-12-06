@@ -71,7 +71,7 @@ namespace PerfectBabysitter.Controllers
                     return View(viewName);
                 }
             }
-            return View();
+            return View("404");
         }
     }
     

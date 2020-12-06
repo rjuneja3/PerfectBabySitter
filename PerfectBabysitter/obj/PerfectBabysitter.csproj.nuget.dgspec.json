@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
+    "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
+    "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "projectUniqueName": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
         "projectName": "PerfectBabysitter",
-        "projectPath": "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\Desktop\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
+        "projectPath": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+        "packagesPath": "C:\\Users\\Geerththan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Geerththan\\Documents\\GitHUB\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Geerththan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -31,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,7 +41,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -86,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

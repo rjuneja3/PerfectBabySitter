@@ -1,9 +1,9 @@
-﻿
+﻿@model SignIn
+
 @{
     ViewData["Title"] = "Sign In Page";
     Layout = "_SignInLayout";
 }
-
 
 <div class="limiter">
     <div class="container-login100">
@@ -12,27 +12,30 @@
                 <img src="~/img/img-01.png" alt="IMG">
             </div>
 
-            <form class="login100-form validate-form">
+            <form asp-action="Login" asp-controller="Account" method="POST" class="login100-form validate-form">
                 <span class="login100-form-title">
                     User Login
                 </span>
+                @Html.ValidationMessage("message")
                 <div class="input-group">
-                    
                     <div class="p-t-10">
+                        <div><span asp-validation-for="AccountType" class="text-danger"></span></div>
                         <label class="radio-container m-r-3">
                             Parent
-                            <input type="radio" checked="checked" name="accountType">
+                            @*<input type="radio" checked="checked" name="accountType">*@
+                            @Html.RadioButtonFor(model => model.AccountType, "Parent")
                             <span class="checkmark"></span>
                         </label>
                         <label class="radio-container">
                             Babysitter
-                            <input type="radio" name="accountType">
+                            @*<input type="radio" name="accountType">*@
+                            @Html.RadioButtonFor(model => model.AccountType, "BabySitter")
                             <span class="checkmark"></span>
                         </label>
                     </div>
                 </div>
                 <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="email" placeholder="Email">
+                    <input asp-for="Email" class="input100" type="text" name="email" placeholder="Email">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -40,7 +43,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Password is required">
-                    <input class="input100" type="password" name="pass" placeholder="Password">
+                    <input asp-for="Password" class="input100" type="password" name="password" placeholder="Password">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-lock" aria-hidden="true"></i>
@@ -55,7 +58,7 @@
 
 
                 <div class="text-center p-t-136">
-                    @Html.ActionLink("Don't have an account? Sign up!", "Register", "Profile", null, new { @class = "text2" })
+                    @Html.ActionLink("Don't have an account? Sign up!", "Register", "Account", null, new { @class = "text2" })
                     <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -63,4 +66,3 @@
         </div>
     </div>
 </div>
-
