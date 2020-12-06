@@ -131,6 +131,16 @@ namespace PerfectBabysitter.Controllers
         {
             await signInManager.SignOutAsync();  
             return RedirectToAction("Login", "Account");  
-        } 
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public ViewResult Account(string returnUrl)
+        {
+         
+            return View();
+        }
+
+
     }
 }
