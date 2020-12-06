@@ -10,8 +10,8 @@ using PerfectBabysitter.Models;
 namespace PerfectBabysitter.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201203030743_AccountDb")]
-    partial class AccountDb
+    [Migration("20201204225847_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -103,6 +103,7 @@ namespace PerfectBabysitter.Migrations
                         .UseIdentityColumn();
 
                     b.Property<string>("Activities")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Address")
@@ -127,6 +128,7 @@ namespace PerfectBabysitter.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")

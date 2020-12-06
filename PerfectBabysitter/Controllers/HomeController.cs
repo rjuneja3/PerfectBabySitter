@@ -73,6 +73,18 @@ namespace PerfectBabysitter.Controllers
             }
             return View("404");
         }
+        public ActionResult ContactUs()
+        {
+            return View("ContactUs");
+        }
+        public ActionResult AboutUs()
+        {
+            return View("AboutUs");
+        }
+        public ActionResult PrivacyPolicy()
+        {
+            return View("PrivacyPolicy");
+        }
     }
-    
+
 }
