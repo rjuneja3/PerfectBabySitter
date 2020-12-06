@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using PerfectBabysitter.Models;
 using PerfectBabysitter.Models.ViewModels;
 using Microsoft.EntityFrameworkCore.Update;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PerfectBabysitter.Controllers
 {
@@ -19,7 +20,7 @@ namespace PerfectBabysitter.Controllers
         {
             repository = repo;
         }
-
+        [Authorize]
         [HttpGet]
         public ViewResult JobForm()
         {
@@ -27,7 +28,7 @@ namespace PerfectBabysitter.Controllers
             return View(job);
         }
 
-        
+        [Authorize]
         [HttpPost]
         public ActionResult JobForm(JobPosting job)
         {
@@ -38,7 +39,7 @@ namespace PerfectBabysitter.Controllers
 
             return View(job);
         }
-
+        [Authorize]
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -101,11 +102,12 @@ namespace PerfectBabysitter.Controllers
             ViewBag.CompleteMessage = "Your job posting has been uploaded!";
             return View();
         }
+        [Authorize]
         public ActionResult ViewJobs()
         {
             return View("ViewJobs", repository.JobPostings);
         }
-
+        [Authorize]
         public ViewResult PostedJobs()
         {
             return View("PostedJobs", repository.JobPostings);
