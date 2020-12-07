@@ -1,0 +1,30 @@
+﻿
+@model PerfectBabysitter.Models.Account
+
+
+<style>
+
+    .ReidBox {
+        border: 3px solid pink;
+        box-shadow: 5px 6px hotpink;
+        align-content: center;
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+    }
+</style>
+
+<div class="ReidBox" style="min-width:18rem; max-width:30.5%;  min-height:19rem;">
+    <div class="carousel-fade" style="height:17rem">
+        <h2>@User.Identity.Name</h2>
+        <h3>@Html.DisplayFor(Model => Model.PhoneNumber)</h3>
+        <h3></h3>
+
+
+
+    </div>
+</div>
+
+
+
