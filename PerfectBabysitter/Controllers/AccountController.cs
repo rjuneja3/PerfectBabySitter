@@ -35,25 +35,25 @@ namespace PerfectBabysitter.Controllers
             {
                 IdentityUser user = await userManager.FindByEmailAsync(model.Email);
 
-                if (user != null && !user.EmailConfirmed)
+                if (user != null && !user.EmailConfirmed)  
                 {
                     ModelState.AddModelError("message", "Email not confirmed yet");
-                    return View(model);
+                    return View(model);  
                 }
 
-                if (await userManager.CheckPasswordAsync(user, model.Password) == false)
+                if (await userManager.CheckPasswordAsync(user, model.Password) == false)  
                 {
                     ModelState.AddModelError("message", "Invalid credentials");
-                    return View(model);
-                }
+                    return View(model);  
+                } 
 
                 var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
 
-                if (result.Succeeded)
+                if (result.Succeeded)  
                 {
                     string role = model.AccountType;
-                    await userManager.AddClaimAsync(user, new Claim(ClaimTypes.Role, role));
-                    //return RedirectToAction("Dashboard");
+                    await userManager.AddClaimAsync(user, new Claim(ClaimTypes.Role, role));  
+                 //return RedirectToAction("Dashboard");
                     return Redirect(model?.ReturnUrl ?? "/Home/Index");
                 }
             }
@@ -86,54 +86,49 @@ namespace PerfectBabysitter.Controllers
             {
                 IdentityUser userCheck = await userManager.FindByEmailAsync(model.Email);
 
-                if (userCheck == null)
-                {
-                    var user = new IdentityUser
-                    {
-                        UserName = model.Email,
-                        NormalizedUserName = model.Email,
-                        Email = model.Email,
-                        PhoneNumber = model.PhoneNumber,
-                        EmailConfirmed = true,
-                        PhoneNumberConfirmed = true,
-                    };
-                    var result = await userManager.CreateAsync(user, model.Password);
+                if (userCheck == null)  
+                {  
+                   var user = new IdentityUser  
+                   {  
+                       UserName = model.Email,  
+                       NormalizedUserName = model.Email,  
+                       Email = model.Email,  
+                       PhoneNumber = model.PhoneNumber,  
+                       EmailConfirmed = true,  
+                       PhoneNumberConfirmed = true,  
+                   };  
+                   var result = await userManager.CreateAsync(user, model.Password);  
 
-                    if (result.Succeeded)
-                    {
+                   if (result.Succeeded)  
+                   {
                         repository.AddAccount(model);
-                        return RedirectToAction("Login");
-                    }
+                        return RedirectToAction("Login");  
+                   }  
 
-                    else
-                    {
-                        if (result.Errors.Count() > 0)
-                        {
-                            foreach (var error in result.Errors)
-                            {
-                                ModelState.AddModelError("message", error.Description);
-                            }
-                        }
-                        return View(model);
-                    }
-                }
+                   else  
+                   {  
+                       if (result.Errors.Count() > 0)  
+                       {  
+                           foreach (var error in result.Errors)  
+                           {  
+                               ModelState.AddModelError("message", error.Description);  
+                           }  
+                       }  
+                       return View(model);  
+                   }  
+                }  
 
-                else
-                {
-                    ModelState.AddModelError("message", "Email already exists.");
-                    return View(model);
-                }
-            }
+                else  
+                {  
+                   ModelState.AddModelError("message", "Email already exists.");  
+                   return View(model);  
+                }  
+            }  
             return View(model);
         }
 
         public async Task<IActionResult> Logout()
         {
-<<<<<<< HEAD
-            await signInManager.SignOutAsync();
-            return RedirectToAction("Login", "Account");
-        }
-=======
             await signInManager.SignOutAsync();  
             return RedirectToAction("Login", "Account");  
         }
@@ -147,6 +142,5 @@ namespace PerfectBabysitter.Controllers
         }
 
 
->>>>>>> AccountUI
     }
 }
