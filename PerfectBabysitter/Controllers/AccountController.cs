@@ -137,7 +137,7 @@ namespace PerfectBabysitter.Controllers
         [AllowAnonymous]
         public ViewResult Account(string returnUrl)
         {
-            return View();
+            return View("Account");
         }
 
 

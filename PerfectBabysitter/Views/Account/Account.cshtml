@@ -1,5 +1,5 @@
 ﻿
-@model PerfectBabysitter.Models.Account
+@model Account
 @{
     ViewData["Title"] = "User";
     Layout = $"_ParentLayout";
@@ -52,11 +52,11 @@
                         <table>
                             <tr>
                                 <form asp-controller="Account" method="post">
-                                    <input hidden name="jobTitle" value="@Model.Id" />
-                                    <input hidden name="jobTitle" value="@Model.AccountType" />
-                                    <input hidden name="description" value="@Model.FirstName" />
-                                    <input hidden name="datePosted" value="@Model.LastName" />
-                                    <input hidden name="datePosted" value="@Model.Email" />
+                                    @*<input hidden name="AccountId" value="@Model.Id" />
+                                    <input hidden name="AccountType" value="@Model.AccountType" />
+                                    <input hidden name="FirstName" value="@Model.FirstName" />
+                                    <input hidden name="LastName" value="@Model.LastName" />
+                                    <input hidden name="Email" value="@Model.Email" />*@
                                 </form>
                             </tr>
                         </table>
