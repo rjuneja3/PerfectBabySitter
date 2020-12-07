@@ -8695,23 +8695,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rohan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\ostri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\PERFECT\\New folder\\Test\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+      "projectUniqueName": "C:\\Users\\ostri\\Desktop\\Folders\\College\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
       "projectName": "PerfectBabysitter",
-      "projectPath": "G:\\PERFECT\\New folder\\Test\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
-      "packagesPath": "C:\\Users\\Rohan\\.nuget\\packages\\",
-      "outputPath": "G:\\PERFECT\\New folder\\Test\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
+      "projectPath": "C:\\Users\\ostri\\Desktop\\Folders\\College\\New folder\\PerfectBabysitter\\PerfectBabysitter\\PerfectBabysitter.csproj",
+      "packagesPath": "C:\\Users\\ostri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ostri\\Desktop\\Folders\\College\\New folder\\PerfectBabysitter\\PerfectBabysitter\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Rohan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ostri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8782,7 +8778,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

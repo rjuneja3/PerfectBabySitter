@@ -18,13 +18,13 @@ namespace PerfectBabysitter.Models
 
         public void AddAccount(Account account)
         {
-            if(account.ID == 0)
+            var accountEntry = context.Accounts.Find(account.Id);
+            if (accountEntry == null)
             {
                 context.Accounts.Add(account);
             }
             else
             {
-                var accountEntry = context.Accounts.Single(a => a.ID == account.ID);
                 if(accountEntry != null)
                 {
                     accountEntry.FirstName = account.FirstName;
