@@ -1,28 +1,79 @@
 ﻿
 @model PerfectBabysitter.Models.Account
+@{
+    ViewData["Title"] = "User";
+    Layout = $"_ParentLayout";
+}
 
+<div>
+    <div>
+        <h1 style="text-align: center;">Account Details</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" style="max-width: none; max-height: none; width: 1120.33px; height: 532.736px;">
+                <table class="table" style="">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.Id)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.AccountType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.LastName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.Email)
+                        </th>
+                        <th></th>
+                    </tr>
 
-<style>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.AccountType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => Model.Email)
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <form asp-controller="Account" method="post">
+                                    <input hidden name="jobTitle" value="@Model.Id" />
+                                    <input hidden name="jobTitle" value="@Model.AccountType" />
+                                    <input hidden name="description" value="@Model.FirstName" />
+                                    <input hidden name="datePosted" value="@Model.LastName" />
+                                    <input hidden name="datePosted" value="@Model.Email" />
+                                </form>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                    
+                </table>
+                <div id="myModal" class="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div id="myModalContent"></div>
+                        </div>
+                    </div>
 
-    .ReidBox {
-        border: 3px solid pink;
-        box-shadow: 5px 6px hotpink;
-        align-content: center;
-        margin: auto;
-        width: 50%;
-        border: 3px solid green;
-        padding: 10px;
-    }
-</style>
-
-<div class="ReidBox" style="min-width:18rem; max-width:30.5%;  min-height:19rem;">
-    <div class="carousel-fade" style="height:17rem">
-        <h2>@User.Identity.Name</h2>
-        <h3>@Html.DisplayFor(Model => Model.PhoneNumber)</h3>
-        <h3></h3>
-
-
-
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

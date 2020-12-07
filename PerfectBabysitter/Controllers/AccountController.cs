@@ -102,7 +102,7 @@ namespace PerfectBabysitter.Controllers
                    if (result.Succeeded)  
                    {
                         repository.AddAccount(model);
-                        return RedirectToAction("Login");  
+                        return RedirectToAction($"Login");  
                    }  
 
                    else  
@@ -130,14 +130,13 @@ namespace PerfectBabysitter.Controllers
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();  
-            return RedirectToAction("Login", "Account");  
+            return RedirectToAction($"Login", $"Account");  
         }
 
         [HttpGet]
         [AllowAnonymous]
         public ViewResult Account(string returnUrl)
         {
-         
             return View();
         }
 
